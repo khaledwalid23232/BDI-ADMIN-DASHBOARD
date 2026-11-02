@@ -1,0 +1,2869 @@
+[
+  {
+    "id": "tenders",
+    "nav": [
+      "Tenders",
+      "المناقصات"
+    ],
+    "variants": {
+      "nat": {
+        "from": [
+          [
+            "Egyptian rules: Law 182/2018 for government buyers, or the company's own procurement policy",
+            "القواعد المصرية: قانون 182 لسنة 2018 للجهات الحكومية، أو سياسة مشتريات الشركة"
+          ],
+          [
+            "Prices in EGP and VAT treatment",
+            "الأسعار بالجنيه ومعاملة ضريبة القيمة المضافة"
+          ]
+        ],
+        "old": [
+          [
+            "Arabic proposals and forms submitted before",
+            "عروض ونماذج عربية قُدمت سابقاً"
+          ]
+        ],
+        "ask": [
+          [
+            "Registered on the government e-procurement portal or the company's supplier portal? (Yes/No)",
+            "هل أنتم مسجلون على بوابة التعاقدات الحكومية أو بوابة موردي الشركة؟ (نعم/لا)"
+          ],
+          [
+            "Write in Arabic, English or both?",
+            "الكتابة بالعربي أم الإنجليزي أم الاثنين؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Temporary or final security from a local bank (government)",
+            "التأمين المؤقت أو النهائي من بنك محلي (جهة حكومية)"
+          ],
+          [
+            "Stamped Arabic forms",
+            "نماذج عربية مختومة"
+          ]
+        ]
+      },
+      "intl": {
+        "from": [
+          [
+            "The buyer's procurement rules and forms (UN, EU, World Bank, foreign company)",
+            "قواعد ونماذج مشتريات الجهة (الأمم المتحدة، الاتحاد الأوروبي، البنك الدولي، شركة أجنبية)"
+          ],
+          [
+            "Nationality and origin eligibility",
+            "شروط الجنسية والمنشأ"
+          ],
+          [
+            "Required language and currency",
+            "اللغة والعملة المطلوبتان"
+          ],
+          [
+            "Deadline time zone",
+            "توقيت الموعد النهائي"
+          ]
+        ],
+        "old": [
+          [
+            "English proposals and CVs written for international buyers",
+            "عروض وسير ذاتية بالإنجليزية لجهات دولية"
+          ],
+          [
+            "International references and their contacts",
+            "مراجع دولية وجهات التواصل"
+          ]
+        ],
+        "ask": [
+          [
+            "Registered on the buyer's portal (e.g. UNGM)? (Yes/No)",
+            "هل أنتم مسجلون على بوابة الجهة (مثل UNGM)؟ (نعم/لا)"
+          ],
+          [
+            "Price currency, USD or EUR, and the exchange rate assumed",
+            "عملة السعر، دولار أم يورو، وسعر الصرف المفترض"
+          ],
+          [
+            "Need a foreign or local partner for eligibility or experience?",
+            "هل تحتاجون شريكاً أجنبياً أو محلياً للأهلية أو الخبرة؟"
+          ],
+          [
+            "Any sanctions or debarment listing? (Yes/No)",
+            "هل يوجد إدراج في قوائم العقوبات أو الاستبعاد؟ (نعم/لا)"
+          ]
+        ],
+        "attach": [
+          [
+            "Translated or notarised legal documents, if required",
+            "مستندات قانونية مترجمة أو موثقة إن طُلبت"
+          ],
+          [
+            "Guarantee from a bank the buyer accepts",
+            "ضمان من بنك تقبله الجهة"
+          ],
+          [
+            "Declarations in the buyer's template",
+            "إقرارات بنموذج الجهة"
+          ]
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": "rfq",
+        "name": [
+          "RFQ · Request for Quotations",
+          "RFQ · طلب عروض أسعار"
+        ],
+        "proposal": [
+          "Quotation",
+          "عرض سعر"
+        ],
+        "price": true,
+        "win": [
+          "Cheapest offer that meets the specs",
+          "أقل سعر مطابق للمواصفات"
+        ],
+        "effort": [
+          "Low · about 2 days",
+          "منخفض · حوالي يومين"
+        ],
+        "note": [
+          "No methodology. Nobody scores it, so the agent does not write one (course 9.2).",
+          "لا توجد منهجية. لا أحد يقيّمها، لذلك لا يكتبها الوكيل (درس 9.2)."
+        ],
+        "write": [
+          [
+            [
+              "Quotation letter",
+              "خطاب عرض السعر"
+            ],
+            [
+              "Company, tender reference, total price, validity, signatory name.",
+              "الشركة، رقم المناقصة، السعر الإجمالي، مدة السريان، اسم الموقّع."
+            ]
+          ],
+          [
+            [
+              "Compliance statement",
+              "بيان المطابقة"
+            ],
+            [
+              "Each spec line: complies, or the exact deviation.",
+              "كل بند من المواصفات: مطابق، أو الاختلاف بالتحديد."
+            ]
+          ],
+          [
+            [
+              "Price schedule",
+              "جدول الأسعار"
+            ],
+            [
+              "The buyer's price form filled exactly, line by line.",
+              "نموذج الأسعار الخاص بالمشتري مملوءاً بنداً بنداً."
+            ]
+          ],
+          [
+            [
+              "Delivery terms",
+              "شروط التسليم"
+            ],
+            [
+              "Dates, place and what is included.",
+              "المواعيد والمكان وما يشمله العرض."
+            ]
+          ],
+          [
+            [
+              "Documents checklist",
+              "قائمة المستندات"
+            ],
+            [
+              "What to attach before sending.",
+              "ما يجب إرفاقه قبل الإرسال."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Specs or scope, line by line",
+            "المواصفات أو النطاق بنداً بنداً"
+          ],
+          [
+            "Quantities and price form",
+            "الكميات ونموذج الأسعار"
+          ],
+          [
+            "Delivery date and place",
+            "موعد ومكان التسليم"
+          ],
+          [
+            "Validity period",
+            "مدة سريان العرض"
+          ],
+          [
+            "Mandatory documents list",
+            "قائمة المستندات الإلزامية"
+          ],
+          [
+            "Deadline, method, and security if government",
+            "الموعد وطريقة التقديم والتأمين إن كانت جهة حكومية"
+          ]
+        ],
+        "old": [
+          [
+            "Short company introduction",
+            "تعريف مختصر بالشركة"
+          ],
+          [
+            "Similar items or services supplied before",
+            "توريدات أو خدمات مشابهة سابقة"
+          ],
+          [
+            "Past prices for similar work, if old financial offers are shared",
+            "أسعار سابقة لأعمال مشابهة إن توفرت عروض مالية قديمة"
+          ]
+        ],
+        "ask": [
+          [
+            "Price per line or total",
+            "السعر لكل بند أو الإجمالي"
+          ],
+          [
+            "Can you meet every spec? Any deviation?",
+            "هل تطابقون كل المواصفات؟ هل يوجد أي اختلاف؟"
+          ],
+          [
+            "Delivery time you can commit to",
+            "مدة التسليم التي تلتزمون بها"
+          ],
+          [
+            "Who signs?",
+            "من يوقّع العرض؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Commercial register",
+            "السجل التجاري"
+          ],
+          [
+            "Tax card and VAT certificate",
+            "البطاقة الضريبية وشهادة القيمة المضافة"
+          ],
+          [
+            "Temporary security (government)",
+            "التأمين المؤقت (جهة حكومية)"
+          ],
+          [
+            "Certificates the specs require",
+            "الشهادات التي تطلبها المواصفات"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "itb",
+        "name": [
+          "ITB · Invitation to Bid",
+          "ITB · دعوة لتقديم عطاءات"
+        ],
+        "proposal": [
+          "Sealed bid: technical + financial envelopes",
+          "عطاء مظروف: فني + مالي"
+        ],
+        "price": true,
+        "win": [
+          "Cheapest compliant bid after evaluation",
+          "أقل عطاء مطابق بعد التقييم"
+        ],
+        "effort": [
+          "Medium · mostly forms",
+          "متوسط · أغلبه نماذج"
+        ],
+        "note": [
+          "Most bids here are lost on paperwork, not price. The agent's main job is getting every form right (course 10.5).",
+          "معظم العطاءات هنا تخسر بسبب الأوراق لا السعر. مهمة الوكيل الأساسية ضبط كل النماذج (درس 10.5)."
+        ],
+        "write": [
+          [
+            [
+              "Technical envelope",
+              "المظروف الفني"
+            ],
+            [
+              "Compliance sheet for every spec, technical offer, experience list, buyer's forms filled.",
+              "جدول مطابقة لكل مواصفة، العرض الفني، قائمة الخبرات، ونماذج المشتري مملوءة."
+            ]
+          ],
+          [
+            [
+              "Financial envelope",
+              "المظروف المالي"
+            ],
+            [
+              "Bill of quantities priced, bid form.",
+              "جدول الكميات مسعّراً ونموذج العطاء."
+            ]
+          ],
+          [
+            [
+              "Declarations",
+              "الإقرارات"
+            ],
+            [
+              "Conflict of interest, no collusion, any form the pack asks for.",
+              "تعارض المصالح، عدم التواطؤ، وأي نموذج تطلبه الكراسة."
+            ]
+          ],
+          [
+            [
+              "Labels and copies",
+              "الملصقات والنسخ"
+            ],
+            [
+              "Exactly as the tender pack says: original plus copies.",
+              "كما تنص الكراسة تماماً: أصل ونسخ."
+            ]
+          ],
+          [
+            [
+              "Documents checklist",
+              "قائمة المستندات"
+            ],
+            [
+              "Everything to attach and stamp.",
+              "كل ما يجب إرفاقه وختمه."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Technical specs",
+            "المواصفات الفنية"
+          ],
+          [
+            "Required forms and declarations",
+            "النماذج والإقرارات المطلوبة"
+          ],
+          [
+            "Bill of quantities",
+            "جدول الكميات"
+          ],
+          [
+            "Envelope rules: labels, copies",
+            "قواعد المظاريف: الملصقات وعدد النسخ"
+          ],
+          [
+            "Temporary security amount and form",
+            "قيمة وشكل التأمين المؤقت"
+          ],
+          [
+            "Eligibility conditions",
+            "شروط الأهلية"
+          ],
+          [
+            "Opening date and deadline",
+            "موعد فتح المظاريف والموعد النهائي"
+          ]
+        ],
+        "old": [
+          [
+            "Past government bids: compliance wording, technical offers",
+            "عطاءات حكومية سابقة: صياغة المطابقة والعروض الفنية"
+          ],
+          [
+            "List of similar supplies or works",
+            "قائمة توريدات أو أعمال مشابهة"
+          ],
+          [
+            "Company description used before",
+            "وصف الشركة المستخدم سابقاً"
+          ]
+        ],
+        "ask": [
+          [
+            "Price per line in the bill of quantities",
+            "السعر لكل بند في جدول الكميات"
+          ],
+          [
+            "Any deviation from the specs?",
+            "هل يوجد أي اختلاف عن المواصفات؟"
+          ],
+          [
+            "Can you issue the temporary security in time? (Yes/No)",
+            "هل يمكنكم إصدار التأمين المؤقت في الموعد؟ (نعم/لا)"
+          ],
+          [
+            "Are your legal documents valid until the opening date? (Yes/No)",
+            "هل مستنداتكم القانونية سارية حتى موعد الفتح؟ (نعم/لا)"
+          ],
+          [
+            "Who signs and stamps?",
+            "من يوقّع ويختم؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Commercial register",
+            "السجل التجاري"
+          ],
+          [
+            "Tax card and VAT certificate",
+            "البطاقة الضريبية وشهادة القيمة المضافة"
+          ],
+          [
+            "Temporary security (original)",
+            "التأمين المؤقت (أصل)"
+          ],
+          [
+            "Stamped forms",
+            "النماذج المختومة"
+          ],
+          [
+            "Required certificates",
+            "الشهادات المطلوبة"
+          ]
+        ],
+        "scope": "nat"
+      },
+      {
+        "id": "rfp",
+        "name": [
+          "RFP · Request for Proposals",
+          "RFP · طلب تقديم عروض"
+        ],
+        "proposal": [
+          "Technical + financial proposal (separate)",
+          "عرض فني + عرض مالي منفصل"
+        ],
+        "price": true,
+        "win": [
+          "Best value: technical and financial scores, often 70/30, with a technical threshold",
+          "أفضل قيمة: درجة فنية ومالية (غالباً 70/30) مع حد أدنى فني"
+        ],
+        "effort": [
+          "High · 1–3 weeks",
+          "عالٍ · من أسبوع إلى ثلاثة"
+        ],
+        "note": [
+          "The technical proposal is the gate: below the threshold the price is never opened. Headings follow the evaluation criteria (course 10.3).",
+          "العرض الفني هو البوابة: تحت الحد الأدنى لا يُفتح المالي أصلاً. العناوين تتبع معايير التقييم (درس 10.3)."
+        ],
+        "write": [
+          [
+            [
+              "Executive summary",
+              "الملخص التنفيذي"
+            ],
+            [
+              "One page with 3–4 win themes.",
+              "صفحة واحدة بها 3–4 رسائل فوز."
+            ]
+          ],
+          [
+            [
+              "Understanding and approach",
+              "الفهم والمدخل"
+            ],
+            [
+              "The client's real problem, barriers, risks, success in their terms.",
+              "مشكلة العميل الحقيقية والعوائق والمخاطر والنجاح بمقاييسه."
+            ]
+          ],
+          [
+            [
+              "Methodology and workplan",
+              "المنهجية وخطة العمل"
+            ],
+            [
+              "Task by task in the ToR numbering, Gantt, milestones.",
+              "مهمة بمهمة بترقيم الشروط المرجعية، مخطط زمني، ومحطات."
+            ]
+          ],
+          [
+            [
+              "Team",
+              "فريق العمل"
+            ],
+            [
+              "Org chart, roles, short tailored bios.",
+              "هيكل الفريق والأدوار ونبذات مختصرة مناسبة."
+            ]
+          ],
+          [
+            [
+              "Firm experience",
+              "خبرات الشركة"
+            ],
+            [
+              "Similar projects written as results.",
+              "مشاريع مشابهة مكتوبة كنتائج."
+            ]
+          ],
+          [
+            [
+              "Financial proposal",
+              "العرض المالي"
+            ],
+            [
+              "Separate file: buyer's forms, fees from person-days × rates, costs, margin.",
+              "ملف منفصل: نماذج المشتري، الأتعاب من أيام العمل × الأجر، التكاليف، الهامش."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Terms of Reference: background, objectives, numbered tasks, outputs, duration, locations",
+            "الشروط المرجعية: الخلفية، الأهداف، المهام المرقمة، المخرجات، المدة، الأماكن"
+          ],
+          [
+            "Evaluation criteria with points",
+            "معايير التقييم ودرجاتها"
+          ],
+          [
+            "Selection method, weights, technical threshold",
+            "طريقة الاختيار والأوزان والحد الأدنى الفني"
+          ],
+          [
+            "Key experts required",
+            "الخبراء الرئيسيون المطلوبون"
+          ],
+          [
+            "Page limits and format",
+            "حدود الصفحات والشكل"
+          ],
+          [
+            "Financial forms and payment terms",
+            "النماذج المالية وشروط الدفع"
+          ],
+          [
+            "Submission format and deadlines",
+            "شكل التقديم والمواعيد"
+          ]
+        ],
+        "old": [
+          [
+            "Company profile text",
+            "نص تعريف الشركة"
+          ],
+          [
+            "Similar past projects: client, scope, year, results",
+            "مشاريع سابقة مشابهة: العميل، النطاق، السنة، النتائج"
+          ],
+          [
+            "Methods and approaches used before",
+            "المنهجيات المستخدمة سابقاً"
+          ],
+          [
+            "Team bios and CVs used before",
+            "نبذات وسير الفريق المستخدمة سابقاً"
+          ],
+          [
+            "Past workplans",
+            "خطط عمل سابقة"
+          ],
+          [
+            "Past daily rates, if old financial proposals are shared",
+            "الأجور اليومية السابقة إن توفرت عروض مالية قديمة"
+          ],
+          [
+            "Strengths and win themes used before",
+            "نقاط القوة ورسائل الفوز السابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Which past projects are closest? (pick from the list found)",
+            "ما أقرب المشاريع السابقة؟ (اختر من القائمة)"
+          ],
+          [
+            "Who is on the team, and are they available? (pick names)",
+            "من في فريق العمل وهل هم متاحون؟ (اختر الأسماء)"
+          ],
+          [
+            "The client's real problem and why now (optional, raises the score)",
+            "مشكلة العميل الحقيقية ولماذا الآن (اختياري، يرفع الدرجة)"
+          ],
+          [
+            "Any partner for a missing skill?",
+            "هل يوجد شريك لخبرة ناقصة؟"
+          ],
+          [
+            "Confirm daily rates and target margin",
+            "تأكيد الأجور اليومية وهامش الربح"
+          ]
+        ],
+        "attach": [
+          [
+            "Legal and tax documents",
+            "المستندات القانونية والضريبية"
+          ],
+          [
+            "Signed CVs and availability letters",
+            "سير ذاتية موقّعة وخطابات إتاحة"
+          ],
+          [
+            "Signed NDA and code of conduct",
+            "اتفاقية السرية وميثاق السلوك موقّعين"
+          ],
+          [
+            "Audited accounts, if required",
+            "القوائم المالية المراجَعة إن طُلبت"
+          ],
+          [
+            "Partner agreement",
+            "اتفاقية الشريك"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "donor",
+        "name": [
+          "Donor-funded tender",
+          "مناقصة ممولة من مانح"
+        ],
+        "proposal": [
+          "Technical + financial offer in the donor's format",
+          "عرض فني ومالي بصيغة المانح"
+        ],
+        "price": true,
+        "win": [
+          "Donor rules: often 80/20 quality/price (EU) or QCBS (World Bank); key experts carry most points",
+          "قواعد المانح: غالباً 80/20 جودة/سعر (الاتحاد الأوروبي) أو جودة وتكلفة (البنك الدولي)، والخبراء الرئيسيون يحملون معظم الدرجات"
+        ],
+        "effort": [
+          "High · 2–4 weeks",
+          "عالٍ · 2–4 أسابيع"
+        ],
+        "note": [
+          "Like an RFP, but the donor's rules decide everything: eligibility and nationality, CV format, key-expert exclusivity, fee and per-diem rules. A wrong format can exclude a strong bid.",
+          "مثل طلب العروض لكن قواعد المانح تحكم كل شيء: الأهلية والجنسية، وشكل السير الذاتية، وحصرية الخبراء الرئيسيين، وقواعد الأتعاب والبدلات. الشكل الخاطئ قد يستبعد عرضاً قوياً."
+        ],
+        "write": [
+          [
+            [
+              "Organisation and methodology",
+              "الجهة والمنهجية"
+            ],
+            [
+              "Rationale, strategy, workplan, in the donor's template.",
+              "المبررات والاستراتيجية وخطة العمل بنموذج المانح."
+            ]
+          ],
+          [
+            [
+              "Key experts",
+              "الخبراء الرئيسيون"
+            ],
+            [
+              "CVs in the donor's format, matched to each required profile.",
+              "سير ذاتية بصيغة المانح مطابقة لكل ملف مطلوب."
+            ]
+          ],
+          [
+            [
+              "Reference sheets",
+              "استمارات المراجع"
+            ],
+            [
+              "Past projects on the donor's form: value, donor, role, dates.",
+              "المشاريع السابقة على نموذج المانح: القيمة والمانح والدور والتواريخ."
+            ]
+          ],
+          [
+            [
+              "Financial offer",
+              "العرض المالي"
+            ],
+            [
+              "Fees per expert-day, incidentals, within the budget ceiling.",
+              "الأتعاب لكل يوم خبير والمصروفات العارضة في حدود سقف الميزانية."
+            ]
+          ],
+          [
+            [
+              "Declarations",
+              "الإقرارات"
+            ],
+            [
+              "Declaration of honour, exclusion criteria, exclusivity statements.",
+              "إقرار الشرف ومعايير الاستبعاد وإقرارات الحصرية."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Donor and procurement rules named in the tender",
+            "المانح وقواعد المشتريات المذكورة"
+          ],
+          [
+            "Eligibility, nationality and origin rules",
+            "قواعد الأهلية والجنسية والمنشأ"
+          ],
+          [
+            "Key-expert profiles: qualifications, minimum years",
+            "ملفات الخبراء الرئيسيين: المؤهلات والحد الأدنى للخبرة"
+          ],
+          [
+            "Evaluation grid and quality/price split",
+            "جدول التقييم ونسبة الجودة إلى السعر"
+          ],
+          [
+            "Budget ceiling, fee and incidentals rules",
+            "سقف الميزانية وقواعد الأتعاب والمصروفات"
+          ],
+          [
+            "Required templates and annexes",
+            "النماذج والملاحق المطلوبة"
+          ],
+          [
+            "Consortium and subcontracting rules",
+            "قواعد التحالف والتعاقد من الباطن"
+          ]
+        ],
+        "old": [
+          [
+            "Past donor-funded projects and their donors",
+            "مشاريع سابقة ممولة من مانحين ومانحوها"
+          ],
+          [
+            "CVs already written in donor formats",
+            "سير ذاتية مكتوبة سابقاً بصيغ المانحين"
+          ],
+          [
+            "Methodologies from past donor bids",
+            "منهجيات من عطاءات مانحين سابقة"
+          ],
+          [
+            "Past expert-day rates",
+            "أجور أيام الخبراء السابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Lead the bid or join a consortium?",
+            "قيادة العطاء أم الانضمام لتحالف؟"
+          ],
+          [
+            "Which experts fit each key profile, and will they sign exclusivity? (pick)",
+            "أي الخبراء يناسب كل ملف رئيسي، وهل يوقعون على الحصرية؟ (اختر)"
+          ],
+          [
+            "Which past projects to use as references? (pick)",
+            "ما المشاريع المستخدمة كمراجع؟ (اختر)"
+          ],
+          [
+            "Confirm fee rates within the ceiling",
+            "تأكيد الأجور في حدود السقف"
+          ]
+        ],
+        "attach": [
+          [
+            "Signed declaration of honour",
+            "إقرار الشرف موقّعاً"
+          ],
+          [
+            "Legal entity and financial identification forms",
+            "نماذج الكيان القانوني والتعريف المالي"
+          ],
+          [
+            "Signed CVs and exclusivity statements",
+            "سير ذاتية موقّعة وإقرارات الحصرية"
+          ],
+          [
+            "Financial statements, if required",
+            "القوائم المالية إن طُلبت"
+          ]
+        ],
+        "scope": "intl"
+      },
+      {
+        "id": "eoi",
+        "name": [
+          "EOI · Expression of Interest",
+          "EOI · إبداء اهتمام"
+        ],
+        "proposal": [
+          "Capability statement",
+          "بيان قدرات"
+        ],
+        "price": false,
+        "win": [
+          "A place on the shortlist (5–6 firms), not a contract",
+          "مكان في القائمة القصيرة (5–6 شركات) وليس عقداً"
+        ],
+        "effort": [
+          "Low · a few days",
+          "منخفض · أيام قليلة"
+        ],
+        "note": [
+          "Skip it and you never see the RFP. Strong EOIs are short, specific and backed by evidence (course 9.4).",
+          "إن تجاهلته فلن ترى طلب العروض أبداً. الإبداء القوي قصير ومحدد ومدعوم بالدليل (درس 9.4)."
+        ],
+        "write": [
+          [
+            [
+              "Cover letter",
+              "خطاب التقديم"
+            ],
+            [
+              "Interest in the assignment and one line on why you fit.",
+              "الاهتمام بالمهمة وسطر عن سبب ملاءمتكم."
+            ]
+          ],
+          [
+            [
+              "Capability statement",
+              "بيان القدرات"
+            ],
+            [
+              "What you do that matches this assignment, with evidence.",
+              "ما تقدمونه ويطابق المهمة، بالدليل."
+            ]
+          ],
+          [
+            [
+              "Relevant experience",
+              "الخبرات ذات الصلة"
+            ],
+            [
+              "3–5 similar projects in a short table.",
+              "3–5 مشاريع مشابهة في جدول مختصر."
+            ]
+          ],
+          [
+            [
+              "Key experts",
+              "الخبراء الرئيسيون"
+            ],
+            [
+              "Short bios of 2–4 people.",
+              "نبذات مختصرة لـ 2–4 أشخاص."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Description of the planned work",
+            "وصف العمل المخطط"
+          ],
+          [
+            "Information and format requested",
+            "المعلومات والشكل المطلوبان"
+          ],
+          [
+            "Shortlisting criteria",
+            "معايير القائمة القصيرة"
+          ],
+          [
+            "Page limit and deadline",
+            "حد الصفحات والموعد"
+          ]
+        ],
+        "old": [
+          [
+            "Company profile",
+            "تعريف الشركة"
+          ],
+          [
+            "Similar projects and results",
+            "مشاريع مشابهة ونتائجها"
+          ],
+          [
+            "Expert bios",
+            "نبذات الخبراء"
+          ]
+        ],
+        "ask": [
+          [
+            "Which 3–5 projects to feature? (pick)",
+            "ما المشاريع التي نعرضها (3–5)؟"
+          ],
+          [
+            "Which experts to name? (pick)",
+            "ما الخبراء الذين نذكرهم؟"
+          ],
+          [
+            "Alone or with a partner?",
+            "منفردين أم مع شريك؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Registration documents, only if requested",
+            "مستندات التسجيل إن طُلبت فقط"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "preq",
+        "name": [
+          "Prequalification · Supplier registration",
+          "تأهيل مسبق · تسجيل مورد"
+        ],
+        "proposal": [
+          "Questionnaire answers + company file",
+          "إجابات الاستبيان + ملف الشركة"
+        ],
+        "price": false,
+        "win": [
+          "A place on the approved supplier list",
+          "مكان في قائمة الموردين المعتمدين"
+        ],
+        "effort": [
+          "Low · once per buyer",
+          "منخفض · مرة لكل جهة"
+        ],
+        "note": [
+          "Mostly filling a questionnaire from what the company already wrote about itself.",
+          "في الغالب ملء استبيان مما كتبته الشركة عن نفسها سابقاً."
+        ],
+        "write": [
+          [
+            [
+              "Questionnaire answers",
+              "إجابات الاستبيان"
+            ],
+            [
+              "Every question in the buyer's form.",
+              "كل أسئلة نموذج الجهة."
+            ]
+          ],
+          [
+            [
+              "Company profile",
+              "تعريف الشركة"
+            ],
+            [
+              "Services, clients, years, team size.",
+              "الخدمات والعملاء والسنوات وحجم الفريق."
+            ]
+          ],
+          [
+            [
+              "Reference list",
+              "قائمة المراجع"
+            ],
+            [
+              "Past clients and projects.",
+              "العملاء والمشاريع السابقة."
+            ]
+          ],
+          [
+            [
+              "Documents checklist",
+              "قائمة المستندات"
+            ],
+            [
+              "What to attach.",
+              "ما يجب إرفاقه."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Questionnaire fields",
+            "حقول الاستبيان"
+          ],
+          [
+            "Supplier categories",
+            "فئات الموردين"
+          ],
+          [
+            "Criteria: years, turnover band, certificates",
+            "الشروط: السنوات، شريحة حجم الأعمال، الشهادات"
+          ],
+          [
+            "Required documents list",
+            "قائمة المستندات المطلوبة"
+          ]
+        ],
+        "old": [
+          [
+            "Company profile and services",
+            "تعريف الشركة وخدماتها"
+          ],
+          [
+            "Clients and past projects",
+            "العملاء والمشاريع السابقة"
+          ],
+          [
+            "Certificates mentioned before",
+            "الشهادات المذكورة سابقاً"
+          ]
+        ],
+        "ask": [
+          [
+            "Which categories to register for?",
+            "ما الفئات المطلوب التسجيل فيها؟"
+          ],
+          [
+            "Do you meet each criterion? (Yes/No each, no numbers)",
+            "هل تستوفون كل شرط؟ (نعم/لا لكل شرط، بلا أرقام)"
+          ],
+          [
+            "Contact person",
+            "مسؤول التواصل"
+          ]
+        ],
+        "attach": [
+          [
+            "Legal and tax documents",
+            "المستندات القانونية والضريبية"
+          ],
+          [
+            "Financial statements",
+            "القوائم المالية"
+          ],
+          [
+            "Certificates",
+            "الشهادات"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "frame",
+        "name": [
+          "Framework agreement · Roster",
+          "اتفاق إطاري · قائمة خبراء"
+        ],
+        "proposal": [
+          "Framework proposal + rate card",
+          "عرض إطاري + جدول أسعار"
+        ],
+        "price": true,
+        "win": [
+          "A place on the framework for 2–3 years; work comes later through call-offs",
+          "مكان في الاتفاق لمدة 2–3 سنوات، والعمل يأتي لاحقاً بطلبات تنفيذ"
+        ],
+        "effort": [
+          "Medium",
+          "متوسط"
+        ],
+        "note": [
+          "Win the list first, then the work. Each later call-off is a short RFP at the framework rates.",
+          "اكسب القائمة أولاً ثم العمل. كل طلب تنفيذ لاحق هو طلب عروض قصير بأسعار الاتفاق."
+        ],
+        "write": [
+          [
+            [
+              "Technical proposal per lot",
+              "عرض فني لكل فئة"
+            ],
+            [
+              "Experience and approach for each category.",
+              "الخبرة والمدخل لكل فئة."
+            ]
+          ],
+          [
+            [
+              "Experts",
+              "الخبراء"
+            ],
+            [
+              "Bios of the people on the roster.",
+              "نبذات المرشحين للقائمة."
+            ]
+          ],
+          [
+            [
+              "Rate card",
+              "جدول الأسعار"
+            ],
+            [
+              "Daily rates per role for the full period.",
+              "الأجر اليومي لكل دور طوال المدة."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Lots or categories",
+            "الفئات"
+          ],
+          [
+            "Scope per lot",
+            "نطاق كل فئة"
+          ],
+          [
+            "Rate card format",
+            "شكل جدول الأسعار"
+          ],
+          [
+            "Duration and call-off rules",
+            "المدة وقواعد طلبات التنفيذ"
+          ],
+          [
+            "Evaluation criteria",
+            "معايير التقييم"
+          ]
+        ],
+        "old": [
+          [
+            "Experience per lot",
+            "الخبرة لكل فئة"
+          ],
+          [
+            "Expert bios",
+            "نبذات الخبراء"
+          ],
+          [
+            "Methods used before",
+            "المنهجيات السابقة"
+          ],
+          [
+            "Past daily rates",
+            "الأجور اليومية السابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Which lots?",
+            "أي الفئات؟"
+          ],
+          [
+            "Daily rate per role for the period",
+            "الأجر اليومي لكل دور طوال المدة"
+          ],
+          [
+            "Which experts to put forward?",
+            "من الخبراء المرشحون؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Legal and tax documents",
+            "المستندات القانونية والضريبية"
+          ],
+          [
+            "Signed CVs",
+            "سير ذاتية موقّعة"
+          ]
+        ],
+        "scope": "both"
+      }
+    ]
+  },
+  {
+    "id": "grants",
+    "nav": [
+      "Grants",
+      "المنح"
+    ],
+    "variants": {
+      "nat": {
+        "from": [
+          [
+            "Local legal status required (registered NGO or company)",
+            "الوضع القانوني المحلي المطلوب (جمعية أو شركة مسجلة)"
+          ],
+          [
+            "Arabic application form",
+            "نموذج التقديم بالعربي"
+          ]
+        ],
+        "old": [
+          [
+            "Arabic proposals to local funds",
+            "مقترحات عربية لصناديق محلية"
+          ]
+        ],
+        "ask": [
+          [
+            "Any relationship with the fund already?",
+            "هل توجد علاقة سابقة مع الصندوق؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Registration certificate (Arabic)",
+            "شهادة التسجيل بالعربي"
+          ]
+        ]
+      },
+      "intl": {
+        "from": [
+          [
+            "Eligible countries list",
+            "قائمة الدول المؤهلة"
+          ],
+          [
+            "Donor registration (e.g. EU funding portal, UN Partner Portal)",
+            "التسجيل لدى المانح (مثل بوابة تمويل الاتحاد الأوروبي أو بوابة شركاء الأمم المتحدة)"
+          ],
+          [
+            "Budget currency, exchange-rate rules, audit requirements",
+            "عملة الميزانية وقواعد سعر الصرف ومتطلبات المراجعة"
+          ]
+        ],
+        "old": [
+          [
+            "English proposals to international donors",
+            "مقترحات إنجليزية لمانحين دوليين"
+          ],
+          [
+            "Past donor reports and evaluations",
+            "تقارير وتقييمات سابقة لمانحين"
+          ]
+        ],
+        "ask": [
+          [
+            "Registered on the donor's portal? (Yes/No)",
+            "هل أنتم مسجلون على بوابة المانح؟ (نعم/لا)"
+          ],
+          [
+            "Does your entity need approval to receive foreign funding? (Yes/No)",
+            "هل تحتاج جهتكم موافقة لتلقي تمويل أجنبي؟ (نعم/لا)"
+          ],
+          [
+            "International partner needed?",
+            "هل يلزم شريك دولي؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Translated registration documents",
+            "مستندات التسجيل مترجمة"
+          ],
+          [
+            "Approval for foreign funding, if needed",
+            "موافقة التمويل الأجنبي إن لزمت"
+          ]
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": "concept",
+        "name": [
+          "Concept note · Letter of inquiry",
+          "مذكرة مفاهيمية · خطاب استفسار"
+        ],
+        "proposal": [
+          "Concept note (2–5 pages)",
+          "مذكرة مفاهيمية (2–5 صفحات)"
+        ],
+        "price": true,
+        "win": [
+          "Invitation to submit a full proposal",
+          "دعوة لتقديم مقترح كامل"
+        ],
+        "effort": [
+          "Low to medium · a few days",
+          "منخفض إلى متوسط · أيام قليلة"
+        ],
+        "note": [
+          "Short and sharp: problem, idea, why you, how much. The agent keeps to the funder's template and word limits.",
+          "قصير ومحدد: المشكلة والفكرة ولماذا أنتم وكم التكلفة. الوكيل يلتزم بنموذج المانح وحدود الكلمات."
+        ],
+        "write": [
+          [
+            [
+              "Problem and need",
+              "المشكلة والاحتياج"
+            ],
+            [
+              "Who is affected, where, and why it matters to this funder.",
+              "من المتأثر وأين ولماذا يهم هذا المانح."
+            ]
+          ],
+          [
+            [
+              "Project idea",
+              "فكرة المشروع"
+            ],
+            [
+              "Objective, main activities, expected results.",
+              "الهدف والأنشطة الرئيسية والنتائج المتوقعة."
+            ]
+          ],
+          [
+            [
+              "Why us",
+              "لماذا نحن"
+            ],
+            [
+              "Track record and partners in a few lines.",
+              "سجل الخبرة والشركاء في سطور."
+            ]
+          ],
+          [
+            [
+              "Budget summary",
+              "ملخص الميزانية"
+            ],
+            [
+              "Total requested, duration, co-funding if any.",
+              "المبلغ المطلوب والمدة والمساهمة إن وُجدت."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Funder priorities and themes",
+            "أولويات المانح ومحاوره"
+          ],
+          [
+            "Eligibility: applicant type, countries",
+            "الأهلية: نوع المتقدم والدول"
+          ],
+          [
+            "Funding range and duration",
+            "نطاق التمويل والمدة"
+          ],
+          [
+            "Template, sections and word limits",
+            "النموذج والأقسام وحدود الكلمات"
+          ],
+          [
+            "Selection criteria for stage 1",
+            "معايير اختيار المرحلة الأولى"
+          ],
+          [
+            "Deadline and method",
+            "الموعد وطريقة التقديم"
+          ]
+        ],
+        "old": [
+          [
+            "Organisation profile and mission",
+            "تعريف الجهة ورسالتها"
+          ],
+          [
+            "Past projects with beneficiaries and results",
+            "مشاريع سابقة بالمستفيدين والنتائج"
+          ],
+          [
+            "Past concept notes or proposals to donors",
+            "مذكرات أو مقترحات سابقة لمانحين"
+          ]
+        ],
+        "ask": [
+          [
+            "Which project idea? (3 sentences)",
+            "ما فكرة المشروع؟ (ثلاث جمل)"
+          ],
+          [
+            "Target group, number and location",
+            "الفئة المستهدفة وعددها ومكانها"
+          ],
+          [
+            "Amount to request and duration",
+            "المبلغ المطلوب والمدة"
+          ],
+          [
+            "Any partners?",
+            "هل يوجد شركاء؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Registration certificate, if requested",
+            "شهادة التسجيل إن طُلبت"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "full",
+        "name": [
+          "Full grant proposal",
+          "مقترح منحة كامل"
+        ],
+        "proposal": [
+          "Narrative proposal + budget + logframe",
+          "مقترح سردي + ميزانية + إطار منطقي"
+        ],
+        "price": true,
+        "win": [
+          "Score on the published criteria: relevance, design, capacity, value for money, sustainability",
+          "الدرجة على المعايير المعلنة: الملاءمة، التصميم، القدرة، القيمة مقابل المال، الاستدامة"
+        ],
+        "effort": [
+          "High · 2–4 weeks",
+          "عالٍ · 2–4 أسابيع"
+        ],
+        "note": [
+          "Write to the funder's template and criteria, like an RFP. The budget covers costs; profit margin is usually not eligible.",
+          "يُكتب على نموذج المانح ومعاييره مثل طلب العروض. الميزانية تغطي التكاليف، والربح غالباً غير مقبول."
+        ],
+        "write": [
+          [
+            [
+              "Summary",
+              "الملخص"
+            ],
+            [
+              "One page: problem, objective, results, budget.",
+              "صفحة: المشكلة والهدف والنتائج والميزانية."
+            ]
+          ],
+          [
+            [
+              "Context and need",
+              "السياق والاحتياج"
+            ],
+            [
+              "Evidence of the problem in the target area.",
+              "أدلة المشكلة في المنطقة المستهدفة."
+            ]
+          ],
+          [
+            [
+              "Objectives and theory of change",
+              "الأهداف ونظرية التغيير"
+            ],
+            [
+              "How activities lead to results.",
+              "كيف تؤدي الأنشطة إلى النتائج."
+            ]
+          ],
+          [
+            [
+              "Activities and workplan",
+              "الأنشطة وخطة العمل"
+            ],
+            [
+              "Who does what and when.",
+              "من يفعل ماذا ومتى."
+            ]
+          ],
+          [
+            [
+              "Monitoring and evaluation",
+              "المتابعة والتقييم"
+            ],
+            [
+              "Indicators, baseline, targets, reporting.",
+              "المؤشرات وخط الأساس والمستهدفات والتقارير."
+            ]
+          ],
+          [
+            [
+              "Budget and justification",
+              "الميزانية ومبرراتها"
+            ],
+            [
+              "Funder's budget form, eligible costs only.",
+              "نموذج ميزانية المانح، التكاليف المقبولة فقط."
+            ]
+          ],
+          [
+            [
+              "Capacity, risks, sustainability",
+              "القدرة والمخاطر والاستدامة"
+            ],
+            [
+              "Why you can deliver and what lasts after the grant.",
+              "لماذا تستطيعون التنفيذ وما الذي يستمر بعد المنحة."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Template and required sections",
+            "النموذج والأقسام المطلوبة"
+          ],
+          [
+            "Evaluation criteria and weights",
+            "معايير التقييم وأوزانها"
+          ],
+          [
+            "Eligible and ineligible costs, overhead cap",
+            "التكاليف المقبولة وغير المقبولة وسقف المصاريف الإدارية"
+          ],
+          [
+            "Co-funding requirement",
+            "شرط المساهمة"
+          ],
+          [
+            "Grant size, duration, countries",
+            "حجم المنحة والمدة والدول"
+          ],
+          [
+            "Reporting and indicator requirements",
+            "متطلبات التقارير والمؤشرات"
+          ],
+          [
+            "Annexes and declarations required",
+            "الملاحق والإقرارات المطلوبة"
+          ]
+        ],
+        "old": [
+          [
+            "Organisation profile, mission, governance",
+            "تعريف الجهة ورسالتها وحوكمتها"
+          ],
+          [
+            "Past projects: beneficiaries, results, funders",
+            "المشاريع السابقة: المستفيدون والنتائج والمانحون"
+          ],
+          [
+            "M&E approaches used before",
+            "أساليب المتابعة والتقييم السابقة"
+          ],
+          [
+            "Team bios",
+            "نبذات الفريق"
+          ],
+          [
+            "Past budgets and cost lines",
+            "ميزانيات وبنود تكاليف سابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Which project idea, or approve the concept note",
+            "ما فكرة المشروع، أو اعتماد المذكرة المفاهيمية"
+          ],
+          [
+            "Target group, number and location",
+            "الفئة المستهدفة وعددها ومكانها"
+          ],
+          [
+            "Partners and their roles",
+            "الشركاء وأدوارهم"
+          ],
+          [
+            "Amount and duration; co-funding available? (Yes/No)",
+            "المبلغ والمدة، وهل تتوفر مساهمة؟ (نعم/لا)"
+          ],
+          [
+            "Who leads the project?",
+            "من يقود المشروع؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Registration certificate",
+            "شهادة التسجيل"
+          ],
+          [
+            "Audited accounts, if required",
+            "القوائم المالية المراجَعة إن طُلبت"
+          ],
+          [
+            "Signed declarations",
+            "الإقرارات الموقّعة"
+          ],
+          [
+            "Partner letters",
+            "خطابات الشركاء"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "match",
+        "name": [
+          "Challenge fund · Matching grant",
+          "صندوق تحدٍّ · منحة مشاركة"
+        ],
+        "proposal": [
+          "Business-case application",
+          "طلب قائم على دراسة جدوى"
+        ],
+        "price": true,
+        "win": [
+          "Commercial viability plus impact, with your own co-investment",
+          "الجدوى التجارية مع الأثر، بمساهمة من أموالكم"
+        ],
+        "effort": [
+          "Medium to high",
+          "متوسط إلى عالٍ"
+        ],
+        "note": [
+          "Closer to a business plan than a donor proposal. The agent never invents revenue or market numbers.",
+          "أقرب لخطة عمل منها لمقترح مانح. الوكيل لا يخترع أرقام إيرادات أو سوق أبداً."
+        ],
+        "write": [
+          [
+            [
+              "The business case",
+              "دراسة الحالة التجارية"
+            ],
+            [
+              "Problem, solution, market, revenue model.",
+              "المشكلة والحل والسوق ونموذج الإيراد."
+            ]
+          ],
+          [
+            [
+              "Impact",
+              "الأثر"
+            ],
+            [
+              "Who benefits and how it is measured.",
+              "من يستفيد وكيف يُقاس."
+            ]
+          ],
+          [
+            [
+              "Plan and milestones",
+              "الخطة والمحطات"
+            ],
+            [
+              "What the money does, step by step.",
+              "ماذا يفعل التمويل خطوة بخطوة."
+            ]
+          ],
+          [
+            [
+              "Budget and co-investment",
+              "الميزانية والمساهمة"
+            ],
+            [
+              "Total cost, grant share, your share.",
+              "التكلفة الكلية وحصة المنحة وحصتكم."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Fund objectives and target sectors",
+            "أهداف الصندوق والقطاعات المستهدفة"
+          ],
+          [
+            "Match ratio required",
+            "نسبة المساهمة المطلوبة"
+          ],
+          [
+            "Grant ceiling and duration",
+            "سقف المنحة والمدة"
+          ],
+          [
+            "Application form and criteria",
+            "نموذج الطلب والمعايير"
+          ]
+        ],
+        "old": [
+          [
+            "Company profile and products",
+            "تعريف الشركة ومنتجاتها"
+          ],
+          [
+            "Past projects and results",
+            "المشاريع السابقة ونتائجها"
+          ],
+          [
+            "Business plans or pitch decks used before",
+            "خطط عمل أو عروض تقديمية سابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Which project?",
+            "أي مشروع؟"
+          ],
+          [
+            "Key numbers you are willing to share (customers, sales band)",
+            "الأرقام الأساسية التي توافقون على مشاركتها (العملاء، شريحة المبيعات)"
+          ],
+          [
+            "Can you fund your share? (Yes/No)",
+            "هل يمكنكم تمويل حصتكم؟ (نعم/لا)"
+          ],
+          [
+            "Impact you expect",
+            "الأثر المتوقع"
+          ]
+        ],
+        "attach": [
+          [
+            "Registration documents",
+            "مستندات التسجيل"
+          ],
+          [
+            "Financial statements, if required",
+            "القوائم المالية إن طُلبت"
+          ],
+          [
+            "Proof of co-funding",
+            "إثبات المساهمة"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "csr",
+        "name": [
+          "Foundation · CSR partnership",
+          "مؤسسة خيرية · شراكة مسؤولية مجتمعية"
+        ],
+        "proposal": [
+          "Partnership proposal",
+          "مقترح شراكة"
+        ],
+        "price": true,
+        "win": [
+          "Fit with the company's or foundation's social goals, visible results, low risk",
+          "الملاءمة مع الأهداف المجتمعية للشركة أو المؤسسة، ونتائج ظاهرة، ومخاطر منخفضة"
+        ],
+        "effort": [
+          "Medium",
+          "متوسط"
+        ],
+        "note": [
+          "Write for two readers: the programme team (impact) and the business side (reputation, ESG reporting, employee involvement).",
+          "اكتب لقارئين: فريق البرامج (الأثر) والجانب التجاري (السمعة، تقارير الاستدامة، مشاركة الموظفين)."
+        ],
+        "write": [
+          [
+            [
+              "Why this partner",
+              "لماذا هذا الشريك"
+            ],
+            [
+              "Link to their stated social or ESG goals.",
+              "الربط بأهدافهم المجتمعية أو أهداف الاستدامة المعلنة."
+            ]
+          ],
+          [
+            [
+              "Programme",
+              "البرنامج"
+            ],
+            [
+              "Who benefits, activities, timeline.",
+              "المستفيدون والأنشطة والمدة."
+            ]
+          ],
+          [
+            [
+              "Results and reporting",
+              "النتائج والتقارير"
+            ],
+            [
+              "Indicators they can put in their own reports.",
+              "مؤشرات يمكنهم وضعها في تقاريرهم."
+            ]
+          ],
+          [
+            [
+              "Visibility and engagement",
+              "الظهور والمشاركة"
+            ],
+            [
+              "Branding, events, employee volunteering.",
+              "الهوية والفعاليات وتطوع الموظفين."
+            ]
+          ],
+          [
+            [
+              "Budget",
+              "الميزانية"
+            ],
+            [
+              "Cost by activity and the partner's share.",
+              "التكلفة لكل نشاط وحصة الشريك."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "The partner's CSR or ESG strategy and focus areas",
+            "استراتيجية الشريك للمسؤولية المجتمعية ومجالات تركيزه"
+          ],
+          [
+            "Grant or partnership guidelines, if any",
+            "إرشادات المنح أو الشراكة إن وُجدت"
+          ],
+          [
+            "Typical grant size and geography",
+            "حجم المنح المعتاد والنطاق الجغرافي"
+          ],
+          [
+            "Programmes they funded before",
+            "برامج موّلوها سابقاً"
+          ]
+        ],
+        "old": [
+          [
+            "Organisation profile",
+            "تعريف الجهة"
+          ],
+          [
+            "Past programmes with results and partners",
+            "برامج سابقة بنتائجها وشركائها"
+          ],
+          [
+            "Past partnership proposals",
+            "مقترحات شراكة سابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Which programme to propose?",
+            "ما البرنامج المقترح؟"
+          ],
+          [
+            "Any existing contact with the partner?",
+            "هل يوجد تواصل سابق مع الشريك؟"
+          ],
+          [
+            "Amount to ask for",
+            "المبلغ المطلوب"
+          ],
+          [
+            "Visibility you can offer",
+            "الظهور الذي يمكن تقديمه"
+          ]
+        ],
+        "attach": [
+          [
+            "Registration documents, if asked",
+            "مستندات التسجيل إن طُلبت"
+          ],
+          [
+            "Annual report",
+            "التقرير السنوي"
+          ]
+        ],
+        "scope": "both"
+      }
+    ]
+  },
+  {
+    "id": "competitions",
+    "nav": [
+      "Competitions",
+      "المسابقات"
+    ],
+    "variants": {
+      "nat": {
+        "from": [
+          [
+            "Local eligibility: Egyptian team or company",
+            "الأهلية المحلية: فريق أو شركة مصرية"
+          ]
+        ],
+        "old": [
+          [
+            "Arabic pitch material",
+            "مواد عرض بالعربي"
+          ]
+        ],
+        "ask": [
+          [
+            "Apply in Arabic or English?",
+            "التقديم بالعربي أم الإنجليزي؟"
+          ]
+        ],
+        "attach": []
+      },
+      "intl": {
+        "from": [
+          [
+            "Country eligibility and where the final is held",
+            "الدول المؤهلة ومكان النهائي"
+          ],
+          [
+            "Prize currency and tax on prizes",
+            "عملة الجائزة والضرائب عليها"
+          ]
+        ],
+        "old": [
+          [
+            "English decks and applications",
+            "عروض وطلبات بالإنجليزية"
+          ]
+        ],
+        "ask": [
+          [
+            "Can the team travel to the final? (Yes/No)",
+            "هل يستطيع الفريق السفر للنهائي؟ (نعم/لا)"
+          ],
+          [
+            "Who presents in English?",
+            "من يقدم بالإنجليزية؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Passports and visas for the final, if needed",
+            "جوازات السفر والتأشيرات للنهائي إن لزم"
+          ]
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": "challenge",
+        "name": [
+          "Startup / innovation challenge",
+          "مسابقة ريادة أو ابتكار"
+        ],
+        "proposal": [
+          "Application form + pitch deck",
+          "نموذج طلب + عرض تقديمي"
+        ],
+        "price": false,
+        "win": [
+          "Highest score on the judging criteria, then the pitch",
+          "أعلى درجة على معايير التحكيم ثم العرض الشفهي"
+        ],
+        "effort": [
+          "Medium",
+          "متوسط"
+        ],
+        "note": [
+          "Answer the form in the judges' words and keep each answer within the limit. No invented traction.",
+          "أجب على النموذج بلغة المحكّمين وفي حدود كل إجابة، بلا أرقام غير حقيقية."
+        ],
+        "write": [
+          [
+            [
+              "Form answers",
+              "إجابات النموذج"
+            ],
+            [
+              "Problem, solution, innovation, impact, feasibility, team.",
+              "المشكلة والحل والابتكار والأثر والجدوى والفريق."
+            ]
+          ],
+          [
+            [
+              "Pitch deck outline",
+              "هيكل العرض التقديمي"
+            ],
+            [
+              "10–12 slides mapped to the criteria.",
+              "10–12 شريحة مرتبطة بالمعايير."
+            ]
+          ],
+          [
+            [
+              "Video script",
+              "نص الفيديو"
+            ],
+            [
+              "If a video is required, within its length.",
+              "إن طُلب فيديو، في حدود مدته."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Challenge statement",
+            "نص التحدي"
+          ],
+          [
+            "Eligibility: team, stage, country",
+            "الأهلية: الفريق والمرحلة والدولة"
+          ],
+          [
+            "Judging criteria and weights",
+            "معايير التحكيم وأوزانها"
+          ],
+          [
+            "Form questions and limits",
+            "أسئلة النموذج وحدودها"
+          ],
+          [
+            "Prize and number of winners",
+            "الجائزة وعدد الفائزين"
+          ],
+          [
+            "Deadline and format (deck, video)",
+            "الموعد والشكل (عرض، فيديو)"
+          ]
+        ],
+        "old": [
+          [
+            "Company story and product description",
+            "قصة الشركة ووصف المنتج"
+          ],
+          [
+            "Past pitch decks and applications",
+            "عروض تقديمية وطلبات سابقة"
+          ],
+          [
+            "Team bios",
+            "نبذات الفريق"
+          ],
+          [
+            "Results and impact stated before",
+            "النتائج والأثر المذكوران سابقاً"
+          ]
+        ],
+        "ask": [
+          [
+            "Which product or solution to enter?",
+            "أي منتج أو حل ستشاركون به؟"
+          ],
+          [
+            "Traction you can share (users, pilots, sales band)",
+            "مؤشرات النمو التي يمكن مشاركتها (مستخدمون، تجارب، شريحة مبيعات)"
+          ],
+          [
+            "Team members to list",
+            "أعضاء الفريق المذكورون"
+          ],
+          [
+            "Do you have a deck or video already? (Yes/No)",
+            "هل لديكم عرض أو فيديو جاهز؟ (نعم/لا)"
+          ]
+        ],
+        "attach": [
+          [
+            "Pitch video",
+            "فيديو العرض"
+          ],
+          [
+            "Final deck design",
+            "التصميم النهائي للعرض"
+          ],
+          [
+            "Registration proof, if required",
+            "إثبات التسجيل إن طُلب"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "award",
+        "name": [
+          "Award · Recognition",
+          "جائزة · تكريم"
+        ],
+        "proposal": [
+          "Award submission (case for the award)",
+          "ملف الترشح (أسباب الاستحقاق)"
+        ],
+        "price": false,
+        "win": [
+          "Evidence against each award criterion",
+          "الدليل على كل معيار من معايير الجائزة"
+        ],
+        "effort": [
+          "Low to medium",
+          "منخفض إلى متوسط"
+        ],
+        "note": [
+          "Awards are won on proof: a result, a number, a client quote. The agent builds one evidence block per criterion.",
+          "الجوائز تُكسب بالدليل: نتيجة أو رقم أو شهادة عميل. الوكيل يبني دليلاً لكل معيار."
+        ],
+        "write": [
+          [
+            [
+              "Entry summary",
+              "ملخص الترشح"
+            ],
+            [
+              "Why you deserve it, in a paragraph.",
+              "لماذا تستحقون الجائزة في فقرة."
+            ]
+          ],
+          [
+            [
+              "Answer per criterion",
+              "إجابة لكل معيار"
+            ],
+            [
+              "Achievement, evidence, impact.",
+              "الإنجاز والدليل والأثر."
+            ]
+          ],
+          [
+            [
+              "Supporting evidence list",
+              "قائمة الأدلة"
+            ],
+            [
+              "Quotes, figures, press, photos.",
+              "اقتباسات وأرقام وأخبار وصور."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Award category",
+            "فئة الجائزة"
+          ],
+          [
+            "Criteria and weights",
+            "المعايير وأوزانها"
+          ],
+          [
+            "Period covered",
+            "الفترة المشمولة"
+          ],
+          [
+            "Word limits and format",
+            "حدود الكلمات والشكل"
+          ]
+        ],
+        "old": [
+          [
+            "Achievements and results in old proposals",
+            "الإنجازات والنتائج في العروض القديمة"
+          ],
+          [
+            "Client results and case studies",
+            "نتائج العملاء ودراسات الحالة"
+          ],
+          [
+            "Company story",
+            "قصة الشركة"
+          ]
+        ],
+        "ask": [
+          [
+            "Which category?",
+            "أي فئة؟"
+          ],
+          [
+            "Top 3 achievements in the period",
+            "أهم 3 إنجازات خلال الفترة"
+          ],
+          [
+            "Client quotes you have permission to use",
+            "شهادات عملاء لديكم إذن باستخدامها"
+          ]
+        ],
+        "attach": [
+          [
+            "Photos and media",
+            "الصور والمواد الإعلامية"
+          ],
+          [
+            "Entry fee payment, if any",
+            "رسوم الترشح إن وُجدت"
+          ]
+        ],
+        "scope": "both"
+      }
+    ]
+  },
+  {
+    "id": "programs",
+    "nav": [
+      "Programs",
+      "البرامج"
+    ],
+    "variants": {
+      "nat": {
+        "from": [
+          [
+            "Local program terms (equity in the Egyptian company)",
+            "شروط البرنامج المحلية (حصة في الشركة المصرية)"
+          ]
+        ],
+        "old": [
+          [
+            "Local market data used before",
+            "بيانات السوق المحلي المستخدمة سابقاً"
+          ]
+        ],
+        "ask": [
+          [
+            "Which city will the founders attend in?",
+            "في أي مدينة سيحضر المؤسسون؟"
+          ]
+        ],
+        "attach": []
+      },
+      "intl": {
+        "from": [
+          [
+            "Required company structure (e.g. a holding company abroad)",
+            "هيكل الشركة المطلوب (مثل شركة قابضة بالخارج)"
+          ],
+          [
+            "Relocation or travel requirements",
+            "متطلبات الانتقال أو السفر"
+          ],
+          [
+            "Investment currency",
+            "عملة الاستثمار"
+          ]
+        ],
+        "old": [
+          [
+            "English decks and investor updates",
+            "عروض وتحديثات للمستثمرين بالإنجليزية"
+          ]
+        ],
+        "ask": [
+          [
+            "Willing to set up a holding company abroad? (Yes/No)",
+            "هل تقبلون تأسيس شركة قابضة بالخارج؟ (نعم/لا)"
+          ],
+          [
+            "Can the founders relocate or travel for the program? (Yes/No)",
+            "هل يستطيع المؤسسون الانتقال أو السفر للبرنامج؟ (نعم/لا)"
+          ],
+          [
+            "Target markets outside Egypt",
+            "الأسواق المستهدفة خارج مصر"
+          ]
+        ],
+        "attach": [
+          [
+            "Company documents, translated",
+            "مستندات الشركة مترجمة"
+          ]
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": "accel",
+        "name": [
+          "Accelerator · Incubator",
+          "مسرّعة · حاضنة أعمال"
+        ],
+        "proposal": [
+          "Application form + pitch deck",
+          "نموذج التقديم + عرض تقديمي"
+        ],
+        "price": false,
+        "win": [
+          "Fit with the program, strong team, early proof",
+          "الملاءمة مع البرنامج وقوة الفريق ووجود دليل مبكر"
+        ],
+        "effort": [
+          "Medium",
+          "متوسط"
+        ],
+        "note": [
+          "Program forms repeat the same questions. The agent drafts each answer from the company file and keeps to the character limits.",
+          "نماذج البرامج تتكرر فيها نفس الأسئلة. الوكيل يصيغ كل إجابة من ملف الشركة ويلتزم بحدود الأحرف."
+        ],
+        "write": [
+          [
+            [
+              "Form answers",
+              "إجابات النموذج"
+            ],
+            [
+              "Problem, solution, market, traction, team, why this program.",
+              "المشكلة والحل والسوق والنمو والفريق ولماذا هذا البرنامج."
+            ]
+          ],
+          [
+            [
+              "Pitch deck outline",
+              "هيكل العرض التقديمي"
+            ],
+            [
+              "10–12 slides.",
+              "10–12 شريحة."
+            ]
+          ],
+          [
+            [
+              "Founder video script",
+              "نص فيديو المؤسس"
+            ],
+            [
+              "If required.",
+              "إن طُلب."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Eligibility: stage, sector, country",
+            "الأهلية: المرحلة والقطاع والدولة"
+          ],
+          [
+            "Program type, cost or equity",
+            "نوع البرنامج والتكلفة أو الحصة"
+          ],
+          [
+            "Duration, mode, cohort size",
+            "المدة وطريقة الحضور وحجم الدفعة"
+          ],
+          [
+            "Application questions and limits",
+            "أسئلة التقديم وحدودها"
+          ],
+          [
+            "Selection steps and deadline",
+            "مراحل الاختيار والموعد"
+          ]
+        ],
+        "old": [
+          [
+            "Company profile and product",
+            "تعريف الشركة والمنتج"
+          ],
+          [
+            "Market description used before",
+            "وصف السوق المستخدم سابقاً"
+          ],
+          [
+            "Past decks and applications",
+            "عروض وطلبات سابقة"
+          ],
+          [
+            "Founder and team bios",
+            "نبذات المؤسسين والفريق"
+          ]
+        ],
+        "ask": [
+          [
+            "Company stage",
+            "مرحلة الشركة"
+          ],
+          [
+            "Traction you can share",
+            "مؤشرات النمو التي يمكن مشاركتها"
+          ],
+          [
+            "What you want from the program",
+            "ما الذي تريدونه من البرنامج"
+          ],
+          [
+            "Accept the equity terms? (Yes/No)",
+            "هل تقبلون شروط الحصة؟ (نعم/لا)"
+          ],
+          [
+            "Can the founders attend the full program? (Yes/No)",
+            "هل يستطيع المؤسسون حضور البرنامج كاملاً؟ (نعم/لا)"
+          ]
+        ],
+        "attach": [
+          [
+            "Pitch deck design",
+            "تصميم العرض التقديمي"
+          ],
+          [
+            "Registration documents, if required",
+            "مستندات التسجيل إن طُلبت"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "invest",
+        "name": [
+          "Investor · VC · Angels",
+          "مستثمرون · رأس مال مخاطر · ملائكة"
+        ],
+        "proposal": [
+          "Pitch deck + one-pager + application",
+          "عرض تقديمي + ملخص صفحة + نموذج"
+        ],
+        "price": true,
+        "win": [
+          "Fit with the investor's thesis, ticket size and stage",
+          "الملاءمة مع توجه المستثمر وحجم الاستثمار والمرحلة"
+        ],
+        "effort": [
+          "Medium to high",
+          "متوسط إلى عالٍ"
+        ],
+        "note": [
+          "Investors expect a return (course 9.1). The agent writes the story and structure; every financial figure comes from the company.",
+          "المستثمر يتوقع عائداً (درس 9.1). الوكيل يكتب القصة والهيكل، وكل رقم مالي يأتي من الشركة."
+        ],
+        "write": [
+          [
+            [
+              "One-pager",
+              "ملخص في صفحة"
+            ],
+            [
+              "Problem, solution, traction, team, the raise.",
+              "المشكلة والحل والنمو والفريق والتمويل المطلوب."
+            ]
+          ],
+          [
+            [
+              "Pitch deck outline",
+              "هيكل العرض التقديمي"
+            ],
+            [
+              "Including use of funds.",
+              "يشمل استخدامات التمويل."
+            ]
+          ],
+          [
+            [
+              "Form answers",
+              "إجابات النموذج"
+            ],
+            [
+              "The investor's own questions.",
+              "أسئلة المستثمر نفسه."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Investor thesis: sectors, stage, countries",
+            "توجه المستثمر: القطاعات والمرحلة والدول"
+          ],
+          [
+            "Ticket size",
+            "حجم الاستثمار"
+          ],
+          [
+            "Application questions",
+            "أسئلة التقديم"
+          ],
+          [
+            "Process and deadline",
+            "الإجراءات والموعد"
+          ]
+        ],
+        "old": [
+          [
+            "Company story and product",
+            "قصة الشركة والمنتج"
+          ],
+          [
+            "Past decks",
+            "عروض سابقة"
+          ],
+          [
+            "Team bios",
+            "نبذات الفريق"
+          ]
+        ],
+        "ask": [
+          [
+            "Amount to raise and what it is for",
+            "المبلغ المطلوب وفيمَ سيُستخدم"
+          ],
+          [
+            "Key numbers you are willing to share",
+            "الأرقام الأساسية التي توافقون على مشاركتها"
+          ],
+          [
+            "Previous funding (Yes/No, from whom)",
+            "تمويل سابق (نعم/لا، ومن أين)"
+          ]
+        ],
+        "attach": [
+          [
+            "Financial model",
+            "النموذج المالي"
+          ],
+          [
+            "Cap table",
+            "جدول الملكية"
+          ],
+          [
+            "Company documents",
+            "مستندات الشركة"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "impact",
+        "name": [
+          "Impact investor · DFI",
+          "مستثمر أثر · مؤسسة تمويل تنموي"
+        ],
+        "proposal": [
+          "Investment application with impact case",
+          "طلب استثمار مع حالة الأثر"
+        ],
+        "price": true,
+        "win": [
+          "Financial return plus measurable impact, and ESG standards met",
+          "عائد مالي مع أثر قابل للقياس واستيفاء معايير البيئة والمجتمع والحوكمة"
+        ],
+        "effort": [
+          "High",
+          "عالٍ"
+        ],
+        "note": [
+          "Two cases in one document: the business case and the impact case. Every financial and impact figure comes from the company; the agent never fills a number.",
+          "حالتان في وثيقة واحدة: الحالة التجارية وحالة الأثر. كل رقم مالي أو رقم أثر يأتي من الشركة، والوكيل لا يملأ أي رقم."
+        ],
+        "write": [
+          [
+            [
+              "Business case",
+              "الحالة التجارية"
+            ],
+            [
+              "Market, model, growth plan, use of funds.",
+              "السوق والنموذج وخطة النمو واستخدامات التمويل."
+            ]
+          ],
+          [
+            [
+              "Impact case",
+              "حالة الأثر"
+            ],
+            [
+              "Who benefits, impact metrics, how they are measured.",
+              "من يستفيد ومؤشرات الأثر وطريقة قياسها."
+            ]
+          ],
+          [
+            [
+              "ESG and governance",
+              "البيئة والمجتمع والحوكمة"
+            ],
+            [
+              "Policies in place and gaps to close.",
+              "السياسات القائمة والفجوات المطلوب سدها."
+            ]
+          ],
+          [
+            [
+              "Investment ask",
+              "طلب الاستثمار"
+            ],
+            [
+              "Amount, instrument (equity, debt, blended), timing.",
+              "المبلغ والأداة (حصة، دين، مختلط) والتوقيت."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Investor's impact thesis and sectors",
+            "توجه المستثمر للأثر وقطاعاته"
+          ],
+          [
+            "Instruments and ticket size",
+            "الأدوات وحجم الاستثمار"
+          ],
+          [
+            "ESG and exclusion lists",
+            "معايير الاستدامة وقوائم الاستبعاد"
+          ],
+          [
+            "Application or screening form",
+            "نموذج التقديم أو الفرز"
+          ]
+        ],
+        "old": [
+          [
+            "Company story and model",
+            "قصة الشركة ونموذج عملها"
+          ],
+          [
+            "Impact and results described before",
+            "الأثر والنتائج الموصوفة سابقاً"
+          ],
+          [
+            "Past decks or grant proposals",
+            "عروض أو مقترحات منح سابقة"
+          ]
+        ],
+        "ask": [
+          [
+            "Amount, instrument and use of funds",
+            "المبلغ والأداة واستخدامات التمويل"
+          ],
+          [
+            "Impact metrics you track",
+            "مؤشرات الأثر التي تتابعونها"
+          ],
+          [
+            "ESG policies in place? (Yes/No per item)",
+            "هل توجد سياسات بيئية واجتماعية وحوكمة؟ (نعم/لا لكل بند)"
+          ],
+          [
+            "Key numbers you are willing to share",
+            "الأرقام الأساسية التي توافقون على مشاركتها"
+          ]
+        ],
+        "attach": [
+          [
+            "Financial statements and model",
+            "القوائم المالية والنموذج المالي"
+          ],
+          [
+            "Cap table",
+            "جدول الملكية"
+          ],
+          [
+            "Policies and certificates",
+            "السياسات والشهادات"
+          ]
+        ],
+        "scope": "both"
+      }
+    ]
+  },
+  {
+    "id": "events",
+    "nav": [
+      "Events",
+      "الفعاليات"
+    ],
+    "variants": {
+      "nat": {
+        "from": [],
+        "old": [],
+        "ask": [
+          [
+            "Abstract or listing in Arabic or English?",
+            "الملخص أو التعريف بالعربي أم الإنجليزي؟"
+          ]
+        ],
+        "attach": []
+      },
+      "intl": {
+        "from": [
+          [
+            "Visa requirements and invitation letters",
+            "متطلبات التأشيرة وخطابات الدعوة"
+          ],
+          [
+            "Prices in USD or EUR",
+            "الأسعار بالدولار أو اليورو"
+          ]
+        ],
+        "old": [],
+        "ask": [
+          [
+            "Who travels, and do they need a visa? (Yes/No)",
+            "من سيسافر وهل يحتاج تأشيرة؟ (نعم/لا)"
+          ]
+        ],
+        "attach": [
+          [
+            "Visa invitation letter request",
+            "طلب خطاب دعوة للتأشيرة"
+          ],
+          [
+            "Travel booking",
+            "حجز السفر"
+          ]
+        ]
+      }
+    },
+    "types": [
+      {
+        "id": "speaker",
+        "name": [
+          "Speaker · Call for papers",
+          "متحدث · دعوة لتقديم أوراق"
+        ],
+        "proposal": [
+          "Talk abstract + speaker bio",
+          "ملخص الكلمة + نبذة المتحدث"
+        ],
+        "price": false,
+        "win": [
+          "A topic that fits the theme and the audience",
+          "موضوع يناسب محور الفعالية وجمهورها"
+        ],
+        "effort": [
+          "Low",
+          "منخفض"
+        ],
+        "note": [
+          "Speaking is business development: the agent links the topic to the services the company sells.",
+          "التحدث تطوير أعمال: الوكيل يربط الموضوع بالخدمات التي تبيعها الشركة."
+        ],
+        "write": [
+          [
+            [
+              "Title and abstract",
+              "العنوان والملخص"
+            ],
+            [
+              "Within the word limit, tied to the theme.",
+              "في حدود الكلمات ومرتبط بالمحور."
+            ]
+          ],
+          [
+            [
+              "Key takeaways",
+              "أهم ما سيخرج به الحضور"
+            ],
+            [
+              "Three points the audience leaves with.",
+              "ثلاث نقاط."
+            ]
+          ],
+          [
+            [
+              "Speaker bio",
+              "نبذة المتحدث"
+            ],
+            [
+              "Short and relevant.",
+              "قصيرة وذات صلة."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Themes and tracks",
+            "المحاور والمسارات"
+          ],
+          [
+            "Abstract format and limit",
+            "شكل الملخص وحدوده"
+          ],
+          [
+            "Audience",
+            "الجمهور"
+          ],
+          [
+            "Submission deadline",
+            "موعد التقديم"
+          ]
+        ],
+        "old": [
+          [
+            "Topics the company knows well",
+            "الموضوعات التي تتقنها الشركة"
+          ],
+          [
+            "Case studies and results",
+            "دراسات الحالة والنتائج"
+          ],
+          [
+            "Bios",
+            "النبذات"
+          ]
+        ],
+        "ask": [
+          [
+            "Who speaks?",
+            "من المتحدث؟"
+          ],
+          [
+            "Topic idea, or pick from suggestions",
+            "فكرة الموضوع أو الاختيار من المقترحات"
+          ],
+          [
+            "Main message",
+            "الرسالة الأساسية"
+          ]
+        ],
+        "attach": [
+          [
+            "Speaker photo",
+            "صورة المتحدث"
+          ],
+          [
+            "Slides, if required",
+            "الشرائح إن طُلبت"
+          ]
+        ],
+        "scope": "both"
+      },
+      {
+        "id": "exhibit",
+        "name": [
+          "Exhibitor · Sponsor",
+          "عارض · راعٍ"
+        ],
+        "proposal": [
+          "Exhibitor application + company listing",
+          "طلب عارض + تعريف الشركة"
+        ],
+        "price": true,
+        "win": [
+          "A place and package that reach the right buyers",
+          "مكان وباقة تصل للمشترين المناسبين"
+        ],
+        "effort": [
+          "Low",
+          "منخفض"
+        ],
+        "note": [
+          "Mostly a form and a listing text. The agent compares packages against the event's target audience.",
+          "في الغالب نموذج ونص تعريفي. الوكيل يقارن الباقات بجمهور الفعالية."
+        ],
+        "write": [
+          [
+            [
+              "Application form answers",
+              "إجابات نموذج الطلب"
+            ],
+            [
+              "Company, products, booth needs.",
+              "الشركة والمنتجات واحتياجات الجناح."
+            ]
+          ],
+          [
+            [
+              "Catalogue listing",
+              "النص التعريفي في الدليل"
+            ],
+            [
+              "Short company description.",
+              "وصف مختصر للشركة."
+            ]
+          ],
+          [
+            [
+              "Package comparison",
+              "مقارنة الباقات"
+            ],
+            [
+              "Which package fits the goal and budget.",
+              "أي باقة تناسب الهدف والميزانية."
+            ]
+          ]
+        ],
+        "from": [
+          [
+            "Packages and prices",
+            "الباقات والأسعار"
+          ],
+          [
+            "Booth sizes",
+            "مساحات الأجنحة"
+          ],
+          [
+            "Application form",
+            "نموذج الطلب"
+          ],
+          [
+            "Target audience",
+            "الجمهور المستهدف"
+          ],
+          [
+            "Deadlines",
+            "المواعيد"
+          ]
+        ],
+        "old": [
+          [
+            "Company profile",
+            "تعريف الشركة"
+          ],
+          [
+            "Products and services",
+            "المنتجات والخدمات"
+          ]
+        ],
+        "ask": [
+          [
+            "Budget band for the event",
+            "شريحة الميزانية للفعالية"
+          ],
+          [
+            "Products to show",
+            "المنتجات المعروضة"
+          ],
+          [
+            "Who will staff the booth?",
+            "من سيتواجد في الجناح؟"
+          ]
+        ],
+        "attach": [
+          [
+            "Logo files",
+            "ملفات الشعار"
+          ],
+          [
+            "Payment",
+            "الدفع"
+          ]
+        ],
+        "scope": "both"
+      }
+    ]
+  }
+]

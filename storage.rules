@@ -1,0 +1,33 @@
+rules_version = '2';
+
+// Uploaded files live under orgs/{orgId}/... and follow the same membership
+// as Firestore (looked up across services). Used from phase 2 (ToR uploads).
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function isMember(orgId) {
+      return request.auth != null
+        && firestore.exists(/databases/(default)/documents/organizations/$(orgId)/members/$(request.auth.uid));
+    }
+    function canEdit(orgId) {
+      return isMember(orgId)
+        && firestore.get(/databases/(default)/documents/organizations/$(orgId)/members/$(request.auth.uid)).data.role in ['admin', 'member'];
+    }
+
+    match /orgs/{orgId}/{allPaths=**} {
+      allow read: if isMember(orgId);
+      // 50 MB per file; PDFs, Word files and images only.
+      allow create, update: if canEdit(orgId)
+        && request.resource.size < 50 * 1024 * 1024
+        && (request.resource.contentType == 'application/pdf'
+            || request.resource.contentType.matches('application/vnd.openxmlformats-officedocument.*')
+            || request.resource.contentType == 'application/msword'
+            || request.resource.contentType.matches('image/.*'));
+      allow delete: if canEdit(orgId);
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

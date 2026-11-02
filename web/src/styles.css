@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+/* Tokens carried over from the original dashboard (index.html). */
+@theme {
+  --color-paper: #fafaf9;
+  --color-ink: #0f172a;
+  --color-muted: #64748b;
+  --color-subtle: #94a3b8;
+  --color-line: #e8ebe9;
+  --color-wash: #f4f6f5;
+  --color-teal: #0d9488;
+  --color-teal-d: #0f766e;
+  --color-teal-dd: #064e4b;
+  --color-teal-bg: #e8f7f3;
+  --color-amber: #d97706;
+  --color-amber-bg: #fff5e6;
+  --color-red: #dc2626;
+  --color-red-bg: #fff0ee;
+
+  --font-sans: 'Sora', 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font-arabic: 'IBM Plex Sans Arabic', 'Sora', system-ui, sans-serif;
+}
+
+html {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+/* Arabic gets its own face first and a little more line height. */
+html[lang='ar'] body {
+  font-family: var(--font-arabic);
+  line-height: 1.7;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

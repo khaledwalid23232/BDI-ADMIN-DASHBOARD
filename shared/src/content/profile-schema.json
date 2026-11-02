@@ -1,0 +1,1618 @@
+{
+  "sections": [
+    {
+      "id": "identity",
+      "title": [
+        "Company identity",
+        "هوية الشركة"
+      ],
+      "why": [
+        "Fills the cover letter, the company summary and the eligibility checks.",
+        "يملأ خطاب التقديم وتعريف الشركة وفحوص الأهلية."
+      ],
+      "fields": [
+        {
+          "id": "name",
+          "label": [
+            "Company name as it should appear on proposals",
+            "اسم الشركة كما يظهر في العروض"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "entity",
+          "label": [
+            "Type of entity",
+            "نوع الكيان"
+          ],
+          "type": "select",
+          "opts": [
+            [
+              "Company",
+              "شركة"
+            ],
+            [
+              "NGO / foundation",
+              "جمعية / مؤسسة"
+            ],
+            [
+              "Individual consultant",
+              "استشاري فرد"
+            ]
+          ],
+          "req": true
+        },
+        {
+          "id": "regCountry",
+          "label": [
+            "Country of registration",
+            "دولة التسجيل"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "workCountries",
+          "label": [
+            "Countries you can work in",
+            "الدول التي يمكنكم العمل فيها"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "langs",
+          "label": [
+            "Languages you write and deliver in",
+            "لغات الكتابة والتنفيذ"
+          ],
+          "type": "multi",
+          "opts": [
+            [
+              "Arabic",
+              "العربية"
+            ],
+            [
+              "English",
+              "الإنجليزية"
+            ],
+            [
+              "French",
+              "الفرنسية"
+            ]
+          ],
+          "req": true
+        },
+        {
+          "id": "since",
+          "label": [
+            "Year you started",
+            "سنة البدء"
+          ],
+          "type": "number",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "cities",
+          "label": [
+            "Cities and offices",
+            "المدن والمكاتب"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "size",
+          "label": [
+            "Team size",
+            "حجم الفريق"
+          ],
+          "type": "select",
+          "opts": [
+            [
+              "1–10",
+              "1–10"
+            ],
+            [
+              "11–50",
+              "11–50"
+            ],
+            [
+              "51–200",
+              "51–200"
+            ],
+            [
+              "More than 200",
+              "أكثر من 200"
+            ]
+          ],
+          "req": true
+        },
+        {
+          "id": "about",
+          "label": [
+            "About the company, in one paragraph",
+            "تعريف بالشركة في فقرة"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "mission",
+          "label": [
+            "Mission (grants ask for it)",
+            "الرسالة (تطلبها المنح)"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "web",
+          "label": [
+            "Website",
+            "الموقع الإلكتروني"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "linkedin",
+          "label": [
+            "LinkedIn page",
+            "صفحة LinkedIn"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "contact",
+          "label": [
+            "Bid contact person: name, email, phone",
+            "مسؤول العطاءات: الاسم والبريد والهاتف"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "signatory",
+          "label": [
+            "Who signs proposals: name and title only",
+            "من يوقّع العروض: الاسم والوظيفة فقط"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "logo",
+          "label": [
+            "Logo",
+            "الشعار"
+          ],
+          "type": "file",
+          "opts": null,
+          "req": false
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "title": [
+        "Products and services",
+        "المنتجات والخدمات"
+      ],
+      "why": [
+        "Lets the agent match each opportunity to what you actually sell, and spot gaps a partner could fill.",
+        "يمكّن الوكيل من مطابقة كل فرصة مع ما تقدمونه فعلاً، واكتشاف الفجوات التي يمكن أن يسدها شريك."
+      ],
+      "record": {
+        "id": "products",
+        "min": 1,
+        "label": [
+          "Product or service",
+          "منتج أو خدمة"
+        ],
+        "title": "name",
+        "fields": [
+          {
+            "id": "name",
+            "label": [
+              "Name",
+              "الاسم"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "kind",
+            "label": [
+              "Type",
+              "النوع"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Service",
+                "خدمة"
+              ],
+              [
+                "Product",
+                "منتج"
+              ],
+              [
+                "Training",
+                "تدريب"
+              ],
+              [
+                "Software or platform",
+                "برنامج أو منصة"
+              ]
+            ],
+            "req": true
+          },
+          {
+            "id": "short",
+            "label": [
+              "Short description",
+              "وصف قصير"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "details",
+            "label": [
+              "Details: what is included, deliverables",
+              "التفاصيل: ما الذي يشمله، والمخرجات"
+            ],
+            "type": "textarea",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "duration",
+            "label": [
+              "Usual duration",
+              "المدة المعتادة"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "forWhom",
+            "label": [
+              "Who it is for",
+              "لمن"
+            ],
+            "type": "multi",
+            "opts": [
+              [
+                "Government",
+                "جهات حكومية"
+              ],
+              [
+                "Private companies",
+                "شركات خاصة"
+              ],
+              [
+                "Donors and international organisations",
+                "مانحون ومنظمات دولية"
+              ],
+              [
+                "NGOs",
+                "جمعيات ومنظمات غير حكومية"
+              ],
+              [
+                "SMEs and startups",
+                "شركات صغيرة وناشئة"
+              ],
+              [
+                "Individuals",
+                "أفراد"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "sectors",
+            "label": [
+              "Sectors",
+              "القطاعات"
+            ],
+            "type": "multi",
+            "opts": [
+              [
+                "Agriculture, Food & Rural Development",
+                "الزراعة والغذاء والتنمية الريفية"
+              ],
+              [
+                "Arts, Culture & Creative Industries",
+                "الفنون والثقافة والصناعات الإبداعية"
+              ],
+              [
+                "Business, Finance & Professional Services",
+                "الأعمال والمال والخدمات المهنية"
+              ],
+              [
+                "Education, Research & Training",
+                "التعليم والبحث والتدريب"
+              ],
+              [
+                "Energy, Environment & Sustainability",
+                "الطاقة والبيئة والاستدامة"
+              ],
+              [
+                "Healthcare & Life Sciences",
+                "الرعاية الصحية وعلوم الحياة"
+              ],
+              [
+                "Industry & Manufacturing",
+                "الصناعة والتصنيع"
+              ],
+              [
+                "Real Estate, Construction & Infrastructure",
+                "العقارات والإنشاءات والبنية التحتية"
+              ],
+              [
+                "Technology & Innovation",
+                "التكنولوجيا والابتكار"
+              ],
+              [
+                "Transport, Logistics & Maritime",
+                "النقل واللوجستيات والملاحة"
+              ],
+              [
+                "Social Development",
+                "التنمية الاجتماعية"
+              ],
+              [
+                "Human Rights, Child Rights & Women's Rights",
+                "حقوق الإنسان والطفل والمرأة"
+              ],
+              [
+                "Refugees, Migration & Humanitarian Aid",
+                "اللاجئون والهجرة والعمل الإنساني"
+              ],
+              [
+                "Entrepreneurship",
+                "ريادة الأعمال"
+              ],
+              [
+                "Trade & Tourism",
+                "التجارة والسياحة"
+              ],
+              [
+                "Fintech",
+                "التكنولوجيا المالية"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "mode",
+            "label": [
+              "Delivery",
+              "طريقة التنفيذ"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "On-site",
+                "حضوري"
+              ],
+              [
+                "Online",
+                "أونلاين"
+              ],
+              [
+                "Hybrid",
+                "مختلط"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "price",
+            "label": [
+              "Price range (optional)",
+              "نطاق السعر (اختياري)"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "proof",
+            "label": [
+              "Past projects that used it",
+              "مشاريع سابقة استخدمته"
+            ],
+            "type": "projref",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "sheet",
+            "label": [
+              "Brochure or service sheet",
+              "البروشور أو ورقة الخدمة"
+            ],
+            "type": "file",
+            "opts": null,
+            "req": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "reach",
+      "title": [
+        "Sectors and geography",
+        "القطاعات والنطاق الجغرافي"
+      ],
+      "why": [
+        "Uses the same sector list as BDIN, so opportunities match automatically.",
+        "يستخدم نفس قائمة القطاعات على المنصة، فتتطابق الفرص تلقائياً."
+      ],
+      "fields": [
+        {
+          "id": "sectors",
+          "label": [
+            "Sectors you work in",
+            "القطاعات التي تعملون بها"
+          ],
+          "type": "multi",
+          "opts": [
+            [
+              "Agriculture, Food & Rural Development",
+              "الزراعة والغذاء والتنمية الريفية"
+            ],
+            [
+              "Arts, Culture & Creative Industries",
+              "الفنون والثقافة والصناعات الإبداعية"
+            ],
+            [
+              "Business, Finance & Professional Services",
+              "الأعمال والمال والخدمات المهنية"
+            ],
+            [
+              "Education, Research & Training",
+              "التعليم والبحث والتدريب"
+            ],
+            [
+              "Energy, Environment & Sustainability",
+              "الطاقة والبيئة والاستدامة"
+            ],
+            [
+              "Healthcare & Life Sciences",
+              "الرعاية الصحية وعلوم الحياة"
+            ],
+            [
+              "Industry & Manufacturing",
+              "الصناعة والتصنيع"
+            ],
+            [
+              "Real Estate, Construction & Infrastructure",
+              "العقارات والإنشاءات والبنية التحتية"
+            ],
+            [
+              "Technology & Innovation",
+              "التكنولوجيا والابتكار"
+            ],
+            [
+              "Transport, Logistics & Maritime",
+              "النقل واللوجستيات والملاحة"
+            ],
+            [
+              "Social Development",
+              "التنمية الاجتماعية"
+            ],
+            [
+              "Human Rights, Child Rights & Women's Rights",
+              "حقوق الإنسان والطفل والمرأة"
+            ],
+            [
+              "Refugees, Migration & Humanitarian Aid",
+              "اللاجئون والهجرة والعمل الإنساني"
+            ],
+            [
+              "Entrepreneurship",
+              "ريادة الأعمال"
+            ],
+            [
+              "Trade & Tourism",
+              "التجارة والسياحة"
+            ],
+            [
+              "Fintech",
+              "التكنولوجيا المالية"
+            ]
+          ],
+          "req": true
+        },
+        {
+          "id": "regions",
+          "label": [
+            "Regions you have worked in",
+            "المناطق التي عملتم بها"
+          ],
+          "type": "multi",
+          "opts": [
+            [
+              "Egypt only",
+              "مصر فقط"
+            ],
+            [
+              "Middle East",
+              "الشرق الأوسط"
+            ],
+            [
+              "North Africa",
+              "شمال أفريقيا"
+            ],
+            [
+              "Sub-Saharan Africa",
+              "أفريقيا جنوب الصحراء"
+            ],
+            [
+              "Europe",
+              "أوروبا"
+            ],
+            [
+              "Asia",
+              "آسيا"
+            ],
+            [
+              "North America",
+              "أمريكا الشمالية"
+            ],
+            [
+              "Latin America & Caribbean",
+              "أمريكا اللاتينية والكاريبي"
+            ],
+            [
+              "Global",
+              "عالمي"
+            ]
+          ],
+          "req": true
+        },
+        {
+          "id": "countries",
+          "label": [
+            "Countries you have worked in",
+            "الدول التي عملتم بها"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        }
+      ]
+    },
+    {
+      "id": "projects",
+      "title": [
+        "Past projects",
+        "المشاريع السابقة"
+      ],
+      "why": [
+        "The evidence behind every proposal: firm experience, similar-contract counts and references.",
+        "الدليل وراء كل عرض: خبرة الشركة، وعدد العقود المشابهة، والمراجع."
+      ],
+      "record": {
+        "id": "projects",
+        "min": 1,
+        "label": [
+          "Project",
+          "مشروع"
+        ],
+        "title": "title",
+        "fields": [
+          {
+            "id": "title",
+            "label": [
+              "Project name",
+              "اسم المشروع"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "client",
+            "label": [
+              "Client",
+              "العميل"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "clientType",
+            "label": [
+              "Client type",
+              "نوع العميل"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Government",
+                "حكومي"
+              ],
+              [
+                "Private company",
+                "شركة خاصة"
+              ],
+              [
+                "Donor or international organisation",
+                "مانح أو منظمة دولية"
+              ],
+              [
+                "NGO",
+                "جمعية"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "country",
+            "label": [
+              "Country",
+              "الدولة"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "sector",
+            "label": [
+              "Sector",
+              "القطاع"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Agriculture, Food & Rural Development",
+                "الزراعة والغذاء والتنمية الريفية"
+              ],
+              [
+                "Arts, Culture & Creative Industries",
+                "الفنون والثقافة والصناعات الإبداعية"
+              ],
+              [
+                "Business, Finance & Professional Services",
+                "الأعمال والمال والخدمات المهنية"
+              ],
+              [
+                "Education, Research & Training",
+                "التعليم والبحث والتدريب"
+              ],
+              [
+                "Energy, Environment & Sustainability",
+                "الطاقة والبيئة والاستدامة"
+              ],
+              [
+                "Healthcare & Life Sciences",
+                "الرعاية الصحية وعلوم الحياة"
+              ],
+              [
+                "Industry & Manufacturing",
+                "الصناعة والتصنيع"
+              ],
+              [
+                "Real Estate, Construction & Infrastructure",
+                "العقارات والإنشاءات والبنية التحتية"
+              ],
+              [
+                "Technology & Innovation",
+                "التكنولوجيا والابتكار"
+              ],
+              [
+                "Transport, Logistics & Maritime",
+                "النقل واللوجستيات والملاحة"
+              ],
+              [
+                "Social Development",
+                "التنمية الاجتماعية"
+              ],
+              [
+                "Human Rights, Child Rights & Women's Rights",
+                "حقوق الإنسان والطفل والمرأة"
+              ],
+              [
+                "Refugees, Migration & Humanitarian Aid",
+                "اللاجئون والهجرة والعمل الإنساني"
+              ],
+              [
+                "Entrepreneurship",
+                "ريادة الأعمال"
+              ],
+              [
+                "Trade & Tourism",
+                "التجارة والسياحة"
+              ],
+              [
+                "Fintech",
+                "التكنولوجيا المالية"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "year",
+            "label": [
+              "Year",
+              "السنة"
+            ],
+            "type": "number",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "value",
+            "label": [
+              "Value band",
+              "شريحة القيمة"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Under $25k",
+                "أقل من 25 ألف دولار"
+              ],
+              [
+                "$25k–100k",
+                "25–100 ألف دولار"
+              ],
+              [
+                "$100k–500k",
+                "100–500 ألف دولار"
+              ],
+              [
+                "$500k–1M",
+                "500 ألف – مليون دولار"
+              ],
+              [
+                "Over $1M",
+                "أكثر من مليون دولار"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "role",
+            "label": [
+              "Your role",
+              "دوركم"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Prime",
+                "رئيسي"
+              ],
+              [
+                "Subcontractor",
+                "من الباطن"
+              ],
+              [
+                "Consortium partner",
+                "شريك في تحالف"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "did",
+            "label": [
+              "What you did",
+              "ماذا نفذتم"
+            ],
+            "type": "textarea",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "result",
+            "label": [
+              "Results, with numbers",
+              "النتائج بالأرقام"
+            ],
+            "type": "textarea",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "canName",
+            "label": [
+              "May we name the client in proposals?",
+              "هل يمكن ذكر اسم العميل في العروض؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "referee",
+            "label": [
+              "Is there a referee who agreed to be contacted?",
+              "هل يوجد مرجع وافق على التواصل معه؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "evidence",
+            "label": [
+              "Evidence: case study, client letter, report",
+              "الدليل: دراسة حالة، خطاب عميل، تقرير"
+            ],
+            "type": "file",
+            "opts": null,
+            "req": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "team",
+      "title": [
+        "Team",
+        "الفريق"
+      ],
+      "why": [
+        "Team sections, CVs and person-days. The agent never adds experience a person does not have.",
+        "أقسام الفريق والسير الذاتية وأيام العمل. الوكيل لا يضيف خبرة غير موجودة لأي شخص."
+      ],
+      "record": {
+        "id": "team",
+        "min": 1,
+        "label": [
+          "Person",
+          "شخص"
+        ],
+        "title": "name",
+        "fields": [
+          {
+            "id": "name",
+            "label": [
+              "Name",
+              "الاسم"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "role",
+            "label": [
+              "Role",
+              "الدور"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "years",
+            "label": [
+              "Years of experience",
+              "سنوات الخبرة"
+            ],
+            "type": "number",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "expertise",
+            "label": [
+              "Main expertise",
+              "مجال الخبرة الأساسي"
+            ],
+            "type": "textarea",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "sectors",
+            "label": [
+              "Sectors",
+              "القطاعات"
+            ],
+            "type": "multi",
+            "opts": [
+              [
+                "Agriculture, Food & Rural Development",
+                "الزراعة والغذاء والتنمية الريفية"
+              ],
+              [
+                "Arts, Culture & Creative Industries",
+                "الفنون والثقافة والصناعات الإبداعية"
+              ],
+              [
+                "Business, Finance & Professional Services",
+                "الأعمال والمال والخدمات المهنية"
+              ],
+              [
+                "Education, Research & Training",
+                "التعليم والبحث والتدريب"
+              ],
+              [
+                "Energy, Environment & Sustainability",
+                "الطاقة والبيئة والاستدامة"
+              ],
+              [
+                "Healthcare & Life Sciences",
+                "الرعاية الصحية وعلوم الحياة"
+              ],
+              [
+                "Industry & Manufacturing",
+                "الصناعة والتصنيع"
+              ],
+              [
+                "Real Estate, Construction & Infrastructure",
+                "العقارات والإنشاءات والبنية التحتية"
+              ],
+              [
+                "Technology & Innovation",
+                "التكنولوجيا والابتكار"
+              ],
+              [
+                "Transport, Logistics & Maritime",
+                "النقل واللوجستيات والملاحة"
+              ],
+              [
+                "Social Development",
+                "التنمية الاجتماعية"
+              ],
+              [
+                "Human Rights, Child Rights & Women's Rights",
+                "حقوق الإنسان والطفل والمرأة"
+              ],
+              [
+                "Refugees, Migration & Humanitarian Aid",
+                "اللاجئون والهجرة والعمل الإنساني"
+              ],
+              [
+                "Entrepreneurship",
+                "ريادة الأعمال"
+              ],
+              [
+                "Trade & Tourism",
+                "التجارة والسياحة"
+              ],
+              [
+                "Fintech",
+                "التكنولوجيا المالية"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "langs",
+            "label": [
+              "Languages",
+              "اللغات"
+            ],
+            "type": "multi",
+            "opts": [
+              [
+                "Arabic",
+                "العربية"
+              ],
+              [
+                "English",
+                "الإنجليزية"
+              ],
+              [
+                "French",
+                "الفرنسية"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "location",
+            "label": [
+              "Based in",
+              "مكان الإقامة"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "availability",
+            "label": [
+              "Availability",
+              "التفرغ"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Full-time",
+                "دوام كامل"
+              ],
+              [
+                "Part-time",
+                "دوام جزئي"
+              ],
+              [
+                "Freelance",
+                "مستقل"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "canLead",
+            "label": [
+              "Can lead a project?",
+              "يستطيع قيادة مشروع؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "rate",
+            "label": [
+              "Daily rate (optional)",
+              "الأجر اليومي (اختياري)"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "cv",
+            "label": [
+              "CV",
+              "السيرة الذاتية"
+            ],
+            "type": "file",
+            "opts": null,
+            "req": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "partners",
+      "title": [
+        "Partners",
+        "الشركاء"
+      ],
+      "why": [
+        "When a tender needs something you lack, the agent looks here and can suggest GO WITH CONDITIONS through a subcontract or a consortium (course 9.7, 10.2).",
+        "عندما تحتاج المناقصة شيئاً ينقصكم، يبحث الوكيل هنا ويمكنه اقتراح «GO بشرط» عبر تعاقد من الباطن أو تحالف (درس 9.7 و10.2)."
+      ],
+      "record": {
+        "id": "partners",
+        "min": 0,
+        "label": [
+          "Partner",
+          "شريك"
+        ],
+        "title": "name",
+        "fields": [
+          {
+            "id": "name",
+            "label": [
+              "Partner name",
+              "اسم الشريك"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "where",
+            "label": [
+              "Country and cities",
+              "الدولة والمدن"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "covers",
+            "label": [
+              "What they cover: services and expertise",
+              "ما يغطونه: الخدمات والخبرات"
+            ],
+            "type": "textarea",
+            "opts": null,
+            "req": true
+          },
+          {
+            "id": "sectors",
+            "label": [
+              "Sectors",
+              "القطاعات"
+            ],
+            "type": "multi",
+            "opts": [
+              [
+                "Agriculture, Food & Rural Development",
+                "الزراعة والغذاء والتنمية الريفية"
+              ],
+              [
+                "Arts, Culture & Creative Industries",
+                "الفنون والثقافة والصناعات الإبداعية"
+              ],
+              [
+                "Business, Finance & Professional Services",
+                "الأعمال والمال والخدمات المهنية"
+              ],
+              [
+                "Education, Research & Training",
+                "التعليم والبحث والتدريب"
+              ],
+              [
+                "Energy, Environment & Sustainability",
+                "الطاقة والبيئة والاستدامة"
+              ],
+              [
+                "Healthcare & Life Sciences",
+                "الرعاية الصحية وعلوم الحياة"
+              ],
+              [
+                "Industry & Manufacturing",
+                "الصناعة والتصنيع"
+              ],
+              [
+                "Real Estate, Construction & Infrastructure",
+                "العقارات والإنشاءات والبنية التحتية"
+              ],
+              [
+                "Technology & Innovation",
+                "التكنولوجيا والابتكار"
+              ],
+              [
+                "Transport, Logistics & Maritime",
+                "النقل واللوجستيات والملاحة"
+              ],
+              [
+                "Social Development",
+                "التنمية الاجتماعية"
+              ],
+              [
+                "Human Rights, Child Rights & Women's Rights",
+                "حقوق الإنسان والطفل والمرأة"
+              ],
+              [
+                "Refugees, Migration & Humanitarian Aid",
+                "اللاجئون والهجرة والعمل الإنساني"
+              ],
+              [
+                "Entrepreneurship",
+                "ريادة الأعمال"
+              ],
+              [
+                "Trade & Tourism",
+                "التجارة والسياحة"
+              ],
+              [
+                "Fintech",
+                "التكنولوجيا المالية"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "strength",
+            "label": [
+              "What they add to you (e.g. local presence, a specialist)",
+              "ما يضيفونه لكم (مثل تواجد محلي أو خبير متخصص)"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "before",
+            "label": [
+              "Worked together before?",
+              "عملتم معاً من قبل؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "beforeOn",
+            "label": [
+              "On which project?",
+              "في أي مشروع؟"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "role",
+            "label": [
+              "Role they usually take",
+              "الدور الذي يأخذونه عادةً"
+            ],
+            "type": "select",
+            "opts": [
+              [
+                "Subcontractor",
+                "من الباطن"
+              ],
+              [
+                "Consortium member",
+                "عضو في تحالف"
+              ],
+              [
+                "Consortium lead",
+                "قائد التحالف"
+              ]
+            ],
+            "req": false
+          },
+          {
+            "id": "agreement",
+            "label": [
+              "Signed teaming agreement or MoU?",
+              "اتفاقية شراكة أو مذكرة تفاهم موقعة؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "exclusive",
+            "label": [
+              "Agreed not to bid with competitors?",
+              "وافقوا على عدم التقدم مع منافسين؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "registered",
+            "label": [
+              "Registered on the portals you use?",
+              "مسجلون على البوابات التي تستخدمونها؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "checked",
+            "label": [
+              "Checked for conflicts and reputation?",
+              "تم فحص تعارض المصالح والسمعة؟"
+            ],
+            "type": "yesno",
+            "opts": null,
+            "req": false
+          },
+          {
+            "id": "contact",
+            "label": [
+              "Contact person",
+              "مسؤول التواصل"
+            ],
+            "type": "text",
+            "opts": null,
+            "req": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "proof",
+      "title": [
+        "How you work and proof",
+        "طريقة العمل والإثباتات"
+      ],
+      "why": [
+        "Feeds the approach, the win themes and the evidence the evaluator looks for.",
+        "يغذي المنهجية ورسائل الفوز والأدلة التي يبحث عنها المقيّم."
+      ],
+      "fields": [
+        {
+          "id": "method",
+          "label": [
+            "How you usually deliver a project: steps",
+            "كيف تنفذون المشروع عادةً: الخطوات"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "tools",
+          "label": [
+            "Tools and templates you use",
+            "الأدوات والنماذج التي تستخدمونها"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "edge",
+          "label": [
+            "What makes you different, and the proof",
+            "ما الذي يميزكم، والدليل"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "mel",
+          "label": [
+            "How you measure results",
+            "كيف تقيسون النتائج"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "certs",
+          "label": [
+            "Certifications",
+            "الشهادات"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "awards",
+          "label": [
+            "Awards, memberships, media",
+            "الجوائز والعضويات والظهور الإعلامي"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "quotes",
+          "label": [
+            "Client testimonials you have permission to use",
+            "شهادات عملاء لديكم إذن باستخدامها"
+          ],
+          "type": "textarea",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "deck",
+          "label": [
+            "Capability deck or company profile",
+            "عرض القدرات أو ملف تعريف الشركة"
+          ],
+          "type": "file",
+          "opts": null,
+          "req": false
+        }
+      ]
+    },
+    {
+      "id": "ready",
+      "title": [
+        "Readiness",
+        "الجاهزية"
+      ],
+      "why": [
+        "Quick checks the agent uses when it suggests GO or NO-GO.",
+        "فحوص سريعة يستخدمها الوكيل عند اقتراح قرار التقدم."
+      ],
+      "fields": [
+        {
+          "id": "egp",
+          "label": [
+            "Registered on the Egyptian government e-procurement portal?",
+            "مسجلون على بوابة التعاقدات الحكومية المصرية؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "ungm",
+          "label": [
+            "Registered on UNGM (UN suppliers)?",
+            "مسجلون على UNGM (موردو الأمم المتحدة)؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "otherPortals",
+          "label": [
+            "Other portals or supplier lists you are on",
+            "بوابات أو قوائم موردين أخرى مسجلون عليها"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "docsValid",
+          "label": [
+            "Are your legal documents valid?",
+            "هل مستنداتكم القانونية سارية؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "guarantee",
+          "label": [
+            "Can you get a bank guarantee?",
+            "هل يمكنكم إصدار خطاب ضمان بنكي؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "wait",
+          "label": [
+            "Can you wait 60–90 days for the first payment?",
+            "هل يمكنكم انتظار 60–90 يوماً للدفعة الأولى؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": true
+        },
+        {
+          "id": "foreign",
+          "label": [
+            "NGOs: do you need approval to receive foreign funding?",
+            "للجمعيات: هل تحتاجون موافقة لتلقي تمويل أجنبي؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "ai",
+          "label": [
+            "By default, may tender documents be read by AI tools?",
+            "افتراضياً، هل يمكن لأدوات الذكاء الاصطناعي قراءة مستندات المناقصات؟"
+          ],
+          "type": "yesno",
+          "opts": null,
+          "req": true
+        }
+      ]
+    },
+    {
+      "id": "prefs",
+      "title": [
+        "Pricing and preferences",
+        "الأسعار والتفضيلات"
+      ],
+      "why": [
+        "Helps price and decide Bid / No-Bid, and tells BDIN which opportunities to recommend.",
+        "يساعد في التسعير وقرار التقدم، ويحدد للمنصة الفرص التي توصي بها."
+      ],
+      "fields": [
+        {
+          "id": "rateSenior",
+          "label": [
+            "Daily rate: senior",
+            "الأجر اليومي: خبير أول"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "rateMid",
+          "label": [
+            "Daily rate: mid-level",
+            "الأجر اليومي: مستوى متوسط"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "rateJunior",
+          "label": [
+            "Daily rate: junior",
+            "الأجر اليومي: مبتدئ"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "oppTypes",
+          "label": [
+            "Opportunities you want",
+            "الفرص التي تهمكم"
+          ],
+          "type": "multi",
+          "opts": [
+            [
+              "Tenders",
+              "المناقصات"
+            ],
+            [
+              "Grants",
+              "المنح"
+            ],
+            [
+              "Competitions",
+              "المسابقات"
+            ],
+            [
+              "Programs",
+              "البرامج"
+            ],
+            [
+              "Events",
+              "الفعاليات"
+            ]
+          ],
+          "req": true
+        },
+        {
+          "id": "minValue",
+          "label": [
+            "Smallest contract worth bidding for",
+            "أصغر قيمة عقد تستحق التقدم"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "maxValue",
+          "label": [
+            "Largest contract you can deliver",
+            "أكبر قيمة عقد تستطيعون تنفيذها"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        },
+        {
+          "id": "targets",
+          "label": [
+            "Countries or regions you are targeting",
+            "الدول أو المناطق المستهدفة"
+          ],
+          "type": "text",
+          "opts": null,
+          "req": false
+        }
+      ]
+    }
+  ]
+}

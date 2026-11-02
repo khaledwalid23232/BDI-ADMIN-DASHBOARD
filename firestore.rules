@@ -1,0 +1,133 @@
+rules_version = '2';
+
+// Tenant isolation lives here, not in the app code.
+// Every organisation's data sits under organizations/{orgId}/...
+// and only members of that organisation can read or write it.
+// Tests: tests/rules (run with `npm run test:rules`).
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ---------- helpers ----------
+    function signedIn() {
+      return request.auth != null;
+    }
+    function orgPath(orgId) {
+      return /databases/$(database)/documents/organizations/$(orgId);
+    }
+    function memberPath(orgId, uid) {
+      return /databases/$(database)/documents/organizations/$(orgId)/members/$(uid);
+    }
+    function isMember(orgId) {
+      return signedIn() && exists(memberPath(orgId, request.auth.uid));
+    }
+    function roleIn(orgId) {
+      return get(memberPath(orgId, request.auth.uid)).data.role;
+    }
+    function isAdmin(orgId) {
+      return isMember(orgId) && roleIn(orgId) == 'admin';
+    }
+    // Admins and members write; reviewers read and comment only.
+    function canEdit(orgId) {
+      return isMember(orgId) && roleIn(orgId) in ['admin', 'member'];
+    }
+    function validStage(s) {
+      return s in ['polling', 'recommended', 'writing', 'review', 'sent', 'outcomes'];
+    }
+    function validRole(r) {
+      return r in ['admin', 'member', 'reviewer'];
+    }
+    function unchanged(field) {
+      return request.resource.data[field] == resource.data[field];
+    }
+
+    // ---------- users ----------
+    // Each person reads and writes only their own user document.
+    match /users/{uid} {
+      allow read, write: if signedIn() && request.auth.uid == uid;
+    }
+
+    // ---------- shared opportunity catalogue ----------
+    // Written only by the server (Admin SDK bypasses rules). Read by any signed-in user.
+    match /opportunities/{oppId} {
+      allow read: if signedIn();
+      allow write: if false;
+    }
+
+    // ---------- organisations ----------
+    match /organizations/{orgId} {
+      allow read: if isMember(orgId);
+
+      // Created in one batch together with the creator's admin membership.
+      allow create: if signedIn()
+        && request.resource.data.createdBy == request.auth.uid
+        && request.resource.data.name is string
+        && request.resource.data.name.size() > 0
+        && request.resource.data.name.size() <= 120
+        && getAfter(memberPath(orgId, request.auth.uid)).data.role == 'admin';
+
+      allow update: if isAdmin(orgId) && unchanged('createdBy');
+      allow delete: if false;
+
+      // ----- members -----
+      match /members/{uid} {
+        allow read: if isMember(orgId);
+
+        // Bootstrap: the creator becomes admin of a brand-new organisation.
+        allow create: if signedIn()
+          && uid == request.auth.uid
+          && request.resource.data.role == 'admin'
+          && !exists(orgPath(orgId))
+          && getAfter(orgPath(orgId)).data.createdBy == request.auth.uid;
+
+        // Afterwards only admins manage other people (never themselves, so an
+        // organisation cannot lose its last admin by accident).
+        allow create, update: if isAdmin(orgId)
+          && uid != request.auth.uid
+          && validRole(request.resource.data.role);
+        allow delete: if isAdmin(orgId) && uid != request.auth.uid;
+      }
+
+      // ----- company profile (the 9 sections) -----
+      match /profile/{docId} {
+        allow read: if isMember(orgId);
+        allow write: if canEdit(orgId);
+      }
+
+      // ----- pipeline -----
+      match /pipelineItems/{itemId} {
+        allow read: if isMember(orgId);
+        allow create: if canEdit(orgId)
+          && validStage(request.resource.data.stage)
+          && request.resource.data.createdBy == request.auth.uid
+          && request.resource.data.title is string
+          && request.resource.data.title.size() > 0
+          && request.resource.data.title.size() <= 300;
+        allow update: if canEdit(orgId)
+          && validStage(request.resource.data.stage)
+          && unchanged('createdBy');
+        allow delete: if isAdmin(orgId);
+
+        // Stage history is append-only: every funnel metric is computed from it.
+        match /stageEvents/{eventId} {
+          allow read: if isMember(orgId);
+          allow create: if canEdit(orgId)
+            && validStage(request.resource.data.to)
+            && (request.resource.data.from == null || validStage(request.resource.data.from))
+            && request.resource.data.by == request.auth.uid
+            && request.resource.data.at == request.time;
+          allow update, delete: if false;
+        }
+      }
+
+      // ----- uploaded documents (phase 2) -----
+      match /documents/{docId} {
+        allow read: if isMember(orgId);
+        allow create, update: if canEdit(orgId);
+        allow delete: if isAdmin(orgId);
+      }
+    }
+
+    // Anything not matched above is closed.
+  }
+}

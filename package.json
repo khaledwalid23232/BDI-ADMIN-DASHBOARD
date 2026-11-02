@@ -1,0 +1,27 @@
+{
+  "name": "bdi",
+  "private": true,
+  "description": "Business Daily Insights: opportunity pipeline and AI proposal writer",
+  "workspaces": [
+    "shared",
+    "web",
+    "tests/rules"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "npm run dev -w web",
+    "dev:emulators": "firebase emulators:start --only auth,firestore,storage --project demo-bdi",
+    "build": "npm run build -w web",
+    "typecheck": "npm run typecheck -w shared && npm run typecheck -w web && npm run typecheck -w tests/rules",
+    "test": "npm run test -w shared && npm run test -w web",
+    "test:rules": "firebase emulators:exec --only firestore,storage --project demo-bdi \"npm run test -w tests/rules\"",
+    "deploy": "npm run build && firebase deploy --only hosting,firestore"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.0.0",
+    "typescript": "~5.8.0",
+    "vitest": "^3.2.0"
+  }
+}
