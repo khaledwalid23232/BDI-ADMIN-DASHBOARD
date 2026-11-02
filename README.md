@@ -4,6 +4,8 @@ The original Business Daily Insights dashboard (not the admin console): a single
 
 Open `index.html` in a browser, or serve it with GitHub Pages.
 
+**Next step: turning this demo into a live product.** See [`docs/PRODUCT_PLAN.md`](docs/PRODUCT_PLAN.md) for the plan, and [`CLAUDE.md`](CLAUDE.md) for the project rules.
+
 ## What is in it
 - Funnel, kanban workspace and calendar of opportunities
 - Company profile (top right) that auto-fills every proposal
