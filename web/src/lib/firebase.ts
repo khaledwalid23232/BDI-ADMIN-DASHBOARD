@@ -10,12 +10,12 @@ import { connectStorageEmulator, getStorage } from 'firebase/storage';
  * Google Cloud Console > APIs & Services > Credentials.
  */
 const firebaseConfig = {
-  apiKey: 'AIzaSyDwwN5ljDGlxHact_4zbMnfU0A-5X2-Z5I',
-  authDomain: 'eagle-eyes-6294d.firebaseapp.com',
-  projectId: 'eagle-eyes-6294d',
-  storageBucket: 'eagle-eyes-6294d.firebasestorage.app',
-  messagingSenderId: '569109362866',
-  appId: '1:569109362866:web:66d5e08323edf9efbff1ab',
+  apiKey: 'AIzaSyDQrWP6RZNGzD-SgWXxYgSOYTxRzzsoO20',
+  authDomain: 'bdi-admin-dashboard.firebaseapp.com',
+  projectId: 'bdi-admin-dashboard',
+  storageBucket: 'bdi-admin-dashboard.firebasestorage.app',
+  messagingSenderId: '881489339130',
+  appId: '1:881489339130:web:ad1bfe2dd27417e83d5f43',
 };
 
 const useEmulators = import.meta.env.VITE_USE_EMULATORS === 'true';
@@ -26,7 +26,7 @@ export const db = initializeFirestore(app, { localCache: persistentLocalCache() 
 export const storage = getStorage(app);
 
 /** Region for Cloud Functions once they are added (phase 2). Same as Firestore. */
-export const FUNCTIONS_REGION = 'europe-west1';
+export const FUNCTIONS_REGION = 'europe-west2';
 
 if (useEmulators) {
   connectAuthEmulator(auth, 'http://127.0.0.1:9099', { disableWarnings: true });

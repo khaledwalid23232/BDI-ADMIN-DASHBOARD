@@ -10,7 +10,7 @@ Read `docs/PRODUCT_PLAN.md` first. It has the current state, the gaps to a live 
 - `docs/PRODUCT_PLAN.md`: the plan. `docs/FIREBASE_SETUP.md`: one-time console steps.
 
 ## Stack (decided)
-Firebase project `eagle-eyes-6294d`: Auth, Firestore and Hosting now; Storage and Cloud Functions from phase 2 (Blaze plan). Region `europe-west1` for everything. Commands: `npm run dev`, `npm test`, `npm run test:rules`, `npm run deploy`.
+Firebase project `bdi-admin-dashboard`: Auth, Firestore and Hosting now; Storage and Cloud Functions from phase 2 (Blaze plan). Region `europe-west2` for everything. Commands: `npm run dev`, `npm test`, `npm run test:rules`, `npm run deploy`.
 
 ## Rules that always apply
 1. The AI never invents experience, numbers, results, CVs, referees or partners. Anything without a source in the company profile, uploaded old proposals or the user's answers is shown as a gap.

@@ -14,7 +14,7 @@ Plan: [`docs/PRODUCT_PLAN.md`](docs/PRODUCT_PLAN.md). Rules for working on it: [
 ## The live product
 
 - **Front end:** React 18, TypeScript, Vite, Tailwind 4, in `web/`. Arabic (RTL) and English from the start.
-- **Back end:** Firebase project `eagle-eyes-6294d`. Auth (email and password), Firestore in `europe-west1`, Hosting. Storage and Cloud Functions come in phase 2.
+- **Back end:** Firebase project `bdi-admin-dashboard`. Auth (email and password), Firestore in `europe-west2`, Hosting. Storage and Cloud Functions come in phase 2.
 - **Shared:** types, stages, funnel maths, playbooks and the company-profile schema, in `shared/`.
 - **Security:** `firestore.rules` and `storage.rules` keep every organisation's data private to its members. Tested in `tests/rules/`.
 

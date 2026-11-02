@@ -81,13 +81,13 @@ Two data points the writer needs that the listing schemas do not have, and which
 
 ## 5. Target architecture
 
-**Decided (2 Nov 2026): Firebase**, project `eagle-eyes-6294d`, region `europe-west1`. The shape of the plan stays; the pieces map like this:
+**Decided (2 Nov 2026): Firebase**, project `bdi-admin-dashboard`, region `europe-west2`. The shape of the plan stays; the pieces map like this:
 
 - **Front end:** React 18 and TypeScript with Vite and Tailwind 4 (`web/`), i18n and RTL built in. Port the single file's screens one by one. Served by **Firebase Hosting**.
 - **Auth:** **Firebase Authentication**, email and password first; organisation invites; optional Google sign-in later.
-- **Database:** **Cloud Firestore** (`europe-west1`). Tenant isolation is enforced by **Security Rules** (`firestore.rules`) instead of PostgreSQL row-level security, and tested in `tests/rules/` against the emulator. All organisation data sits under `organizations/{orgId}/...`. Playbooks and the profile schema are versioned JSON in `shared/src/content/`.
+- **Database:** **Cloud Firestore** (`europe-west2`). Tenant isolation is enforced by **Security Rules** (`firestore.rules`) instead of PostgreSQL row-level security, and tested in `tests/rules/` against the emulator. All organisation data sits under `organizations/{orgId}/...`. Playbooks and the profile schema are versioned JSON in `shared/src/content/`.
 - **Storage:** **Cloud Storage for Firebase** under `orgs/{orgId}/...`, same membership check (`storage.rules`). Needs the Blaze plan on new projects; arrives in phase 2.
-- **Jobs and AI:** **Cloud Functions (2nd gen)** in `europe-west1`, with Cloud Tasks or Pub/Sub as the queue, for ingestion, document processing and AI calls (section 6). Needs Blaze; arrives in phase 2.
+- **Jobs and AI:** **Cloud Functions (2nd gen)** in `europe-west2`, with Cloud Tasks or Pub/Sub as the queue, for ingestion, document processing and AI calls (section 6). Needs Blaze; arrives in phase 2.
 - **Environments:** Hosting preview channels for staging at first; a separate staging project before launch.
 
 Firestore has no joins or ad-hoc SQL, so collections are shaped around how screens read them, and funnel metrics are computed from `stageEvents` in code (`shared/src/funnel.ts`), or later as rollups written by a function.
@@ -200,7 +200,7 @@ Out of scope for the MVP: payments, expert-review marketplace, grants and other 
 
 ## 10. Decisions needed from the owner
 
-1. ~~Stack and hosting, region for data storage.~~ **Decided:** Firebase (`eagle-eyes-6294d`), `europe-west1`. See section 5.
+1. ~~Stack and hosting, region for data storage.~~ **Decided:** Firebase (`bdi-admin-dashboard`), `europe-west2`. See section 5.
 2. Which opportunity sources are allowed, and who clears their terms of use.
 3. Which AI provider and model, and the data-processing terms to accept for confidential tenders.
 4. Pricing model and whether the first release is free, invite-only or paid.
@@ -220,4 +220,4 @@ Out of scope for the MVP: payments, expert-review marketplace, grants and other 
 
 ## 12. Starter prompt for the next chat
 
-> I am continuing the Business Daily Insights product. Read `CLAUDE.md` and `docs/PRODUCT_PLAN.md` in this repo first. Phase 0 is done: the app runs on Firebase (`eagle-eyes-6294d`, `europe-west1`) with sign-in, organisations, the pipeline on Firestore, security rules with tests, and CI. We are starting **phase 1**: the company profile screen saved to Firestore, team invites, and real opportunities. Follow the product rules in section 2 exactly. Ask me before choosing an AI provider or a data source, or anything that costs money.
+> I am continuing the Business Daily Insights product. Read `CLAUDE.md` and `docs/PRODUCT_PLAN.md` in this repo first. Phase 0 is done: the app runs on Firebase (`bdi-admin-dashboard`, `europe-west2`) with sign-in, organisations, the pipeline on Firestore, security rules with tests, and CI. We are starting **phase 1**: the company profile screen saved to Firestore, team invites, and real opportunities. Follow the product rules in section 2 exactly. Ask me before choosing an AI provider or a data source, or anything that costs money.
