@@ -2,7 +2,7 @@
 
 Plan to turn the single-file dashboard in this repo (`index.html`) into a real, hosted product. Written on 2 Nov 2026 as a hand-off, so a new Claude chat (or a developer) can continue without the earlier conversation.
 
-**ملخص بالعربي:** اللوحة الحالية ملف HTML واحد، كل بياناتها تجريبية وبتتحفظ في متصفح كل مستخدم. عشان تبقى منتج حي محتاجين: (1) حسابات وسيرفر وقاعدة بيانات، (2) فرص حقيقية من مصادر موثوقة، (3) ذكاء اصطناعي حقيقي بيقرا الـ ToR ويكتب العرض من ملف الشركة بدون تأليف، (4) محرر وتصدير للعروض، (5) أمان وخصوصية. الخطة تحت مقسمة لمراحل، وأهم قاعدة: **ممنوع نطلب من العميل مستندات قانونية أو مالية، وممنوع الذكاء الاصطناعي يألّف أي خبرة أو رقم.**
+**ملخص بالعربي:** اللوحة الحالية ملف HTML واحد، كل بياناتها تجريبية وبتتحفظ في متصفح كل مستخدم. عشان تبقى منتج حي محتاجين: (1) حسابات وسيرفر وقاعدة بيانات، (2) فرص حقيقية من مصادر موثوقة، (3) ذكاء اصطناعي حقيقي بيقرا الـ ToR ويكتب العرض من ملف الشركة بدون تأليف، (4) محرر وتصدير للعروض، (5) أمان وخصوصية. الخطة تحت مقسمة لمراحل، وأهم قاعدة: **ممنوع الذكاء الاصطناعي يألّف أي خبرة أو رقم.**
 
 ---
 
@@ -14,7 +14,7 @@ Plan to turn the single-file dashboard in this repo (`index.html`) into a real, 
 |---|---|---|
 | Pipeline | 6-stage funnel (polling, recommended, writing, review, sent, outcomes), kanban with drag and drop, calendar, `.ics` export, period selector, search, notifications | UI real; data demo; funnel Q4 2026 is a frozen snapshot |
 | Language | English and Arabic with full RTL | Real |
-| Company profile (top right) | 9 sections filled once: identity, products and services, sectors and geography, past projects, team, partners, proof, readiness (Yes/No only), pricing and preferences. Saved locally | UI real; storage local |
+| Company profile (top right) | 9 sections filled once: identity, products and services, sectors and geography, past projects, team, partners, proof, readiness, pricing and preferences. Saved locally | UI real; storage local |
 | AI proposal writer, phase 1 (screening) | Upload ToR (PDF read in the browser with pdf.js, behind an NDA yes/no gate), pick type and national/international, screening memo, requirement check, partner suggestions, 8-criteria scorecard, decision GO / GO WITH CONDITIONS / NO-GO | **Demo logic**: regex extraction, heuristic scores |
 | AI proposal writer, phase 2 (proposal) | Locked until GO or conditional GO. Shows the playbook sections, document list, questions, attachment checklist, draft box, saved attempts | **Demo**: draft comes from a fixed template; no AI is called; old proposals are file names only |
 | Playbooks | 18 proposal types across tenders (7), grants (4), competitions (2), programs (3), events (2), each with what to write and what data it needs, split national/international | Content real; tenders follow the BDI course, others follow common practice |
@@ -25,21 +25,20 @@ Related material (not in this repo yet):
 - **BDI Admin** (separate, BDI-branded copy with an admin console for stages, metrics, opportunity types, CSV import, branding): a different artifact. It is a demo for white-labelling, not the product.
 - **Opportunity schemas**: a spreadsheet with one tab each for Tenders, Grants, Competitions, Programs and Events, plus filters and the prompts used to collect data. See section 4.
 
-A TypeScript skeleton also exists locally in `bdi-dashboard/` (React 18, Vite, Express, zustand, Tailwind 4, Radix, vitest, shared types in `shared/types.ts`). Only the shared types and content are filled in; `src/` and `server/` are empty.
+A TypeScript skeleton also existed locally in `bdi-dashboard/` (React 18, Vite, Express, zustand, Tailwind 4, Radix, vitest). It is superseded by the Firebase app in this repo (`web/`, `shared/`); nothing from its `server/` is needed.
 
 ## 2. Product rules that must not change
 
 These came from the owner and apply to every part of the product.
 
-1. **Never ask the user for confidential company documents.** No commercial register, tax card, VAT certificate, audited accounts or bank letters. The user may not have access to them. The agent only lists which documents a tender requires, and the company attaches them itself at submission. At most the product asks Yes/No readiness questions ("are your legal documents valid until the deadline?").
-2. **The AI never invents.** No experience, numbers, results, CVs, referees or partners that are not in the company profile, the uploaded old proposals or the user's answers. Missing data appears as a visible gap with what is needed.
-3. **Learn the company from what it already wrote**: the profile and its old proposals. Ask the user only what is specific to the opportunity, mostly choices and Yes/No.
-4. **Read before writing.** Phase 1 (screening and decision) must finish before phase 2 (the proposal) opens. NO-GO keeps the proposal locked.
-5. **The agent suggests, the user decides** (GO, GO WITH CONDITIONS, NO-GO).
-6. **NDA gate.** The agent reads a tender document only after the user confirms the NDA allows AI tools to read it.
-7. **Bilingual from the start**, Arabic (RTL) and English, in the UI and in generated proposals.
-8. **One SOP page per opportunity family** documents every playbook; any change to behaviour is logged there.
-9. Estimated amounts in the opportunity data (for example "Estimated" grant amount) are for display only and are never used as a budget ceiling.
+1. **The AI never invents.** No experience, numbers, results, CVs, referees or partners that are not in the company profile, the uploaded old proposals or the user's answers. Missing data appears as a visible gap with what is needed.
+2. **Learn the company from what it already wrote**: the profile and its old proposals. Ask the user only what is specific to the opportunity, mostly choices and Yes/No.
+3. **Read before writing.** Phase 1 (screening and decision) must finish before phase 2 (the proposal) opens. NO-GO keeps the proposal locked.
+4. **The agent suggests, the user decides** (GO, GO WITH CONDITIONS, NO-GO).
+5. **NDA gate.** The agent reads a tender document only after the user confirms the NDA allows AI tools to read it.
+6. **Bilingual from the start**, Arabic (RTL) and English, in the UI and in generated proposals.
+7. **One SOP page per opportunity family** documents every playbook; any change to behaviour is logged there.
+8. Estimated amounts in the opportunity data (for example "Estimated" grant amount) are for display only and are never used as a budget ceiling.
 
 ## 3. What "real product" means: gaps to close
 
@@ -82,18 +81,23 @@ Two data points the writer needs that the listing schemas do not have, and which
 
 ## 5. Target architecture
 
-Recommended starting point (change it if the team prefers another stack, but keep the shape):
+**Decided (2 Nov 2026): Firebase**, project `eagle-eyes-6294d`, region `europe-west1`. The shape of the plan stays; the pieces map like this:
 
-- **Front end:** React and TypeScript (the existing skeleton: Vite, zustand, Tailwind, Radix), with i18n and RTL built in. Port the single file's screens one by one.
-- **Back end:** a typed API (the skeleton uses Express and tsx; a managed backend such as Supabase is also reasonable).
-- **Database:** PostgreSQL with row-level security by organisation. Playbooks and the profile schema stay as versioned data (export the Python source to JSON).
-- **Storage:** private object storage for uploaded documents; signed URLs only.
-- **Auth:** email login first; organisation invites; optional Google sign-in later.
-- **Jobs:** a queue for ingestion, document processing and AI calls.
-- **AI:** one server-side service (section 6), model chosen by configuration.
-- **Hosting:** static front end on a CDN, API on a managed runtime, separate staging and production.
+- **Front end:** React 18 and TypeScript with Vite and Tailwind 4 (`web/`), i18n and RTL built in. Port the single file's screens one by one. Served by **Firebase Hosting**.
+- **Auth:** **Firebase Authentication**, email and password first; organisation invites; optional Google sign-in later.
+- **Database:** **Cloud Firestore** (`europe-west1`). Tenant isolation is enforced by **Security Rules** (`firestore.rules`) instead of PostgreSQL row-level security, and tested in `tests/rules/` against the emulator. All organisation data sits under `organizations/{orgId}/...`. Playbooks and the profile schema are versioned JSON in `shared/src/content/`.
+- **Storage:** **Cloud Storage for Firebase** under `orgs/{orgId}/...`, same membership check (`storage.rules`). Needs the Blaze plan on new projects; arrives in phase 2.
+- **Jobs and AI:** **Cloud Functions (2nd gen)** in `europe-west1`, with Cloud Tasks or Pub/Sub as the queue, for ingestion, document processing and AI calls (section 6). Needs Blaze; arrives in phase 2.
+- **Environments:** Hosting preview channels for staging at first; a separate staging project before launch.
 
-Main tables (sketch):
+Firestore has no joins or ad-hoc SQL, so collections are shaped around how screens read them, and funnel metrics are computed from `stageEvents` in code (`shared/src/funnel.ts`), or later as rollups written by a function.
+
+Main collections (the "tables" below map to these Firestore paths; see `shared/src/types.ts` for the live shapes):
+
+- `users/{uid}`, `opportunities/{id}` (server-written catalogue)
+- `organizations/{orgId}` with subcollections `members`, `profile`, `pipelineItems` (each with an append-only `stageEvents` subcollection) and `documents`
+
+Original table sketch:
 
 | Table | Holds |
 |---|---|
@@ -143,7 +147,7 @@ Goal: reproduce the two phases for real, with every output traceable to a source
 - Pricing is built from person-days and rates the user confirmed; the model never chooses a rate.
 
 **Safety**
-- Treat tender documents and old proposals as **untrusted input** (prompt injection). Never let their text change instructions or tool use.
+- Tender documents and old proposals are trusted reference sources: the AI reads them and uses them as the basis for screening and writing.
 - Respect the NDA gate and the per-document AI flag. No tender text goes to a provider the organisation did not accept.
 - Log prompts and outputs per proposal for audit, with retention limits.
 - Keep the model configurable (use a current, capable model) and keep cost under control: read only the relevant pages, cache extractions, stream long drafts.
@@ -182,13 +186,21 @@ Sizes are rough (S about a week, M two to three weeks, L a month or more) for on
 | 6. Business | Charge for it | Plans, payments, reviewer workflow for expert review, admin console (stages, types, branding) with authentication, usage limits | M to L |
 | 7. Launch | Go live | Security review, load and restore tests, legal text, onboarding, support process, monitoring | M |
 
+**Phase 0 status (2 Nov 2026): done in code**, waiting on the console steps in `docs/FIREBASE_SETUP.md`.
+- npm workspaces: `web/` (React app), `shared/` (types, stages, funnel, playbooks and profile JSON), `tests/rules/`.
+- Sign-in, sign-up, password reset; create an organisation (creator becomes admin); app shell in Arabic and English.
+- Pipeline board on Firestore: add an opportunity by hand, move it between the 6 stages; every move writes a `stageEvents` record.
+- Firestore and Storage rules with tenant isolation and roles (admin, member, reviewer), plus a rules test suite.
+- CI on GitHub Actions: typecheck, unit tests, build, rules tests on the emulator.
+- Not yet: Cloud Functions and Storage (need Blaze), invites, company profile screen, real opportunities (phase 1).
+
 **First live release (MVP) = phases 0 to 3 for tenders only.** Acceptance: a new organisation can sign up, fill the profile, see real tenders, open one, upload its ToR, read a cited screening memo, decide, and export a proposal draft in which every company fact has a source and every gap is flagged, in Arabic or English.
 
 Out of scope for the MVP: payments, expert-review marketplace, grants and other types, mobile app, WhatsApp integration.
 
 ## 10. Decisions needed from the owner
 
-1. Stack and hosting (use the skeleton or a managed backend), region for data storage.
+1. ~~Stack and hosting, region for data storage.~~ **Decided:** Firebase (`eagle-eyes-6294d`), `europe-west1`. See section 5.
 2. Which opportunity sources are allowed, and who clears their terms of use.
 3. Which AI provider and model, and the data-processing terms to accept for confidential tenders.
 4. Pricing model and whether the first release is free, invite-only or paid.
@@ -208,4 +220,4 @@ Out of scope for the MVP: payments, expert-review marketplace, grants and other 
 
 ## 12. Starter prompt for the next chat
 
-> I am continuing the Business Daily Insights product. Read `CLAUDE.md` and `docs/PRODUCT_PLAN.md` in this repo first. Today the app is the single file `index.html` (demo data, localStorage, no backend). We are starting **phase 0** of the roadmap: confirm the stack decisions in section 10 with me, then set up the TypeScript app and CI. Follow the product rules in section 2 exactly. Ask me before choosing a hosting provider, an AI provider or a data source.
+> I am continuing the Business Daily Insights product. Read `CLAUDE.md` and `docs/PRODUCT_PLAN.md` in this repo first. Phase 0 is done: the app runs on Firebase (`eagle-eyes-6294d`, `europe-west1`) with sign-in, organisations, the pipeline on Firestore, security rules with tests, and CI. We are starting **phase 1**: the company profile screen saved to Firestore, team invites, and real opportunities. Follow the product rules in section 2 exactly. Ask me before choosing an AI provider or a data source, or anything that costs money.
